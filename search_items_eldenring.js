@@ -124,25 +124,32 @@ function createItemCard(item) {
 
     const colorBar = document.createElement('div');
     colorBar.classList.add('color-bar');
+    
+    // Create color divs for primary and secondary colors
+    const primaryColorDiv = document.createElement('div');
+    primaryColorDiv.style.backgroundColor = item.primaryColor;
+    colorBar.appendChild(primaryColorDiv);
 
-    // Loop through primary and secondary colors and create divs
-    const colors = [item.primaryColor, ...item.secondaryColors];
-    colors.forEach(color => {
-        const colorDiv = document.createElement('div');
-        colorDiv.style.backgroundColor = color;
-        colorBar.appendChild(colorDiv);
+    const secondaryColorDiv1 = document.createElement('div');
+    secondaryColorDiv1.style.backgroundColor = item.secondaryColors[0];
+    colorBar.appendChild(secondaryColorDiv1);
 
-        // Add event listener to query the existing div's background-color
-        colorDiv.addEventListener('click', () => {
-            const bgColor = window.getComputedStyle(colorDiv).backgroundColor;
-            document.getElementById('favcolor').value = rgbToHex(bgColor);
-            updateMatchingItems();  // Trigger the search with the selected color
-        });
-    });
+    const secondaryColorDiv2 = document.createElement('div');
+    secondaryColorDiv2.style.backgroundColor = item.secondaryColors[1];
+    colorBar.appendChild(secondaryColorDiv2);
 
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(colorBar);
+
+    // Add event listener to each color div to search by clicked color
+    [primaryColorDiv, secondaryColorDiv1, secondaryColorDiv2].forEach((colorDiv) => {
+        colorDiv.addEventListener('click', () => {
+            const bgColor = window.getComputedStyle(colorDiv).backgroundColor;
+            document.getElementById('favcolor').value = rgbToHex(bgColor);
+            updateMatchingItems();  // Trigger search with the selected color
+        });
+    });
 
     return card;
 }
