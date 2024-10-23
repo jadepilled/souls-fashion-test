@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
+	<link rel="stylesheet" href="resources/styles.css">
+    <title>Elden Ring - Fashion Souls v1.0.2</title>
+    
+</head>
+<body>
+
+<div class="topnav">
+    <a class="active" href="index">Home</a>
+    <a href="#">Elden Ring</a>
+    <a href="bloodborne">Bloodborne</a>
+    <a href="demonssouls">Demon's Souls</a>
+	 <div class="dropdown">
+        <button class="dropbtn">Dark Souls
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="ds1.html">Dark Souls Remastered</a>
+            <a href="ds2.html">Dark Souls II: SotFS</a>
+            <a href="ds3.html">Dark Souls III</a>
+        </div>
+    </div>
+    <a href="https://ko-fi.com/psyopgirl">Donate</a>
+	<a href="https://ko-fi.com/psyopgirl">Discord</a>
+	<a href="https://github.com/jadepilled/souls-fashion">Source Code</a>
+	<a href="feedback.html">Feedback</a>
+
+    <div class="mode-switch">
+        <button id="modeToggle">Light/Dark Mode</button>
+    </div>
+   
+</div>
+
+<div class="FashionSouls">
+    <h2>Fashion Souls</h2>
+    <h3 style="color: #bfbfbf;">SoulsBorne fashion tool by Psyopgirl</h3>
+</div>
+
+		<div class="search-bar">
+				<input type="text" id="searchInput" placeholder="Search for items by name or hex color...">
+			</div>
+
+			<div class="color-picker">
+				<label for="favcolor">Click an item to compare, or select a color:</label><p></p>
+				<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+			</div><p></p>
+<div class='parent'>
+	<div class='child'>	
+			<div class="slider-container">
+				<label for="secondaryWeightSlider">Weight for secondary colors:</label><br></br>
+				<input type="range" id="secondaryWeightSlider" name="secondaryWeight" min="0" max="1" step="0.1" value="0.5">
+				<span id="sliderValue">0.5</span>
+			</div></div>
+	<div class='child'>
+			<div class="slider-container">
+				<label for="colorThresholdSlider">Set Color Similarity Threshold:</label><br></br>
+				<input type="range" id="colorThresholdSlider" name="colorThreshold" min="0" max="500" step="10" value="100">
+				<span id="colorThresholdValue">100</span>
+			</div></div>
+</div>
+<div class="item-grid" id="itemGrid">
+    <!-- Items will be dynamically loaded here -->
+</div>
+
+<script src="search_items_eldenring.js"></script>
+<script>
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    // Check local storage to persist theme choice
+    if (localStorage.getItem('theme') === 'light') {
+        body.classList.add('light-mode');
+    }
+
+    modeToggle.addEventListener('click', () => {
+        if (body.classList.contains('light-mode')) {
+            body.classList.remove('light-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Add click event listener to all anchor links for fade effect
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            document.body.classList.add('fade-out'); // Add fade-out class
+
+            // Delay the navigation to the new page to allow the fade-out effect to play
+            setTimeout(() => {
+                window.location.href = this.href; // Navigate to the new page
+            }, 500); // Match this duration with the CSS transition duration
+        });
+    });
+</script>
+<div class="copyright">
+    Copyright © Psyopgirl 2024.	<br></br>Dark Souls, Elden Ring, Bloodborne & Demon's Souls are property of Sony & FromSoftware respectively.
+</div>
+<script>
+                // Delay the navigation to the new page to allow the fade-out effect to play
+                setTimeout(() => {
+                    window.location.href = item.link; // Navigate to the new page
+                }, 500); // Match this duration with the CSS transition duration
+            });
+    // Listen for visibility change to manage the fade-in effect
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'visible') {
+            document.body.classList.remove('fade-out'); // Remove fade-out when coming back
+        } else {
+            document.body.classList.add('fade-out'); // Add fade-out when leaving
+        }
+    });
+</script>
+</body>
+</html>
