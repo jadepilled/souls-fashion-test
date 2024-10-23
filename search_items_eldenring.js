@@ -142,7 +142,7 @@ function createItemCard(item) {
     card.appendChild(title);
     card.appendChild(colorBar);
 
-    // Add event listener to each color div to search by clicked color
+    // Adding the event listener to each div for color click functionality without altering the existing display
     [primaryColorDiv, secondaryColorDiv1, secondaryColorDiv2].forEach((colorDiv) => {
         colorDiv.addEventListener('click', () => {
             const bgColor = window.getComputedStyle(colorDiv).backgroundColor;
@@ -154,7 +154,7 @@ function createItemCard(item) {
     return card;
 }
 
-// Helper function to convert RGB to HEX
+// Helper function to convert RGB to HEX format
 function rgbToHex(rgb) {
     const result = rgb.match(/\d+/g);
     return "#" + result.map(x => {
