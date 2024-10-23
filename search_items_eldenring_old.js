@@ -110,51 +110,7 @@ function displayItems(filteredItems) {
 }
 
 // Function to create item cards with click event for search
-
 function createItemCard(item) {
-    const card = document.createElement('div');
-    card.classList.add('item-card');
-
-    const img = document.createElement('img');
-    img.src = `pages/eldenring/icons/${item.image}`;
-    img.alt = item.name;
-
-    const title = document.createElement('p');
-    title.textContent = item.name;
-
-    const colorBar = document.createElement('div');
-    colorBar.classList.add('color-bar');
-
-    // Loop through primary and secondary colors and create divs
-    const colors = [item.primaryColor, ...item.secondaryColors];
-    colors.forEach(color => {
-        const colorDiv = document.createElement('div');
-        colorDiv.style.backgroundColor = color;
-        colorBar.appendChild(colorDiv);
-
-        // Add event listener to each color div
-        colorDiv.addEventListener('click', () => {
-            document.getElementById('favcolor').value = rgbToHex(colorDiv.style.backgroundColor);
-            updateMatchingItems();  // Trigger the search with the selected color
-        });
-    });
-
-    card.appendChild(img);
-    card.appendChild(title);
-    card.appendChild(colorBar);
-
-    return card;
-}
-
-// Helper function to convert RGB to HEX
-function rgbToHex(rgb) {
-    const result = rgb.match(/\d+/g);
-    return "#" + result.map(x => {
-        const hex = parseInt(x).toString(16);
-        return hex.length === 1 ? "0" + hex : hex;
-    }).join('');
-}
-
     const card = document.createElement('div');
     card.classList.add('item-card');
 
