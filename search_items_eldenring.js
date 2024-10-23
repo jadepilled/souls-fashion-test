@@ -132,9 +132,10 @@ function createItemCard(item) {
         colorDiv.style.backgroundColor = color;
         colorBar.appendChild(colorDiv);
 
-        // Add event listener to each color div
+        // Add event listener to query the existing div's background-color
         colorDiv.addEventListener('click', () => {
-            document.getElementById('favcolor').value = rgbToHex(colorDiv.style.backgroundColor);
+            const bgColor = window.getComputedStyle(colorDiv).backgroundColor;
+            document.getElementById('favcolor').value = rgbToHex(bgColor);
             updateMatchingItems();  // Trigger the search with the selected color
         });
     });
