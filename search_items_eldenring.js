@@ -263,10 +263,13 @@ document.getElementById("clearFilter").addEventListener("click", () => {
 // Fetch items on page load
 window.onload = fetchItems;
 
+
 // Add right-click context menu to item cards
 function createItemCard(item) {
     const card = document.createElement('div');
     card.classList.add('item-card');
+
+    // Right-click menu to send item to outfit simulator
     card.addEventListener('contextmenu', (event) => {
         event.preventDefault();
         showContextMenu(event, item);
@@ -291,29 +294,15 @@ function createItemCard(item) {
     const colorBar = document.createElement('div');
     colorBar.classList.add('color-bar');
 
+    // Primary and secondary color divs
     const primaryColorDiv = document.createElement('div');
     primaryColorDiv.style.backgroundColor = item.primaryColor;
-    primaryColorDiv.addEventListener('click', (event) => {
-        event.stopPropagation();
-        document.getElementById('favcolor').value = item.primaryColor;
-        updateMatchingItems();
-    });
 
     const secondaryColorDiv1 = document.createElement('div');
     secondaryColorDiv1.style.backgroundColor = item.secondaryColors[0];
-    secondaryColorDiv1.addEventListener('click', (event) => {
-        event.stopPropagation();
-        document.getElementById('favcolor').value = item.secondaryColors[0];
-        updateMatchingItems();
-    });
 
     const secondaryColorDiv2 = document.createElement('div');
     secondaryColorDiv2.style.backgroundColor = item.secondaryColors[1];
-    secondaryColorDiv2.addEventListener('click', (event) => {
-        event.stopPropagation();
-        document.getElementById('favcolor').value = item.secondaryColors[1];
-        updateMatchingItems();
-    });
 
     colorBar.appendChild(primaryColorDiv);
     colorBar.appendChild(secondaryColorDiv1);
@@ -322,14 +311,11 @@ function createItemCard(item) {
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(colorBar);
-    card.addEventListener('click', () => {
-        document.getElementById('favcolor').value = item.primaryColor;
-        updateMatchingItems();
-    });
 
     return card;
 }
 
+// Right-click menu logic
 function showContextMenu(event, item) {
     const menu = document.createElement("div");
     menu.classList.add("context-menu");
@@ -346,14 +332,21 @@ function showContextMenu(event, item) {
     menu.appendChild(sendToSimulatorOption);
     document.body.appendChild(menu);
 
+    // Remove menu after click outside
     document.addEventListener("click", () => menu.remove(), { once: true });
 }
 
+// Add item to simulator slots and save to localStorage
 function addItemToSimulator(item) {
     const slotId = `${item.type}Slot`;
     const slot = document.getElementById(slotId);
     if (slot) {
         slot.textContent = item.name;
         slot.style.backgroundImage = `url('pages/eldenring/icons/${item.image}')`;
+
+        // Save the outfit data in localStorage
+        const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+        outfitSlots[slotId] = { name: item.name, image: item.image };
+        localStorage.setItem('outfitSlots', JSON.stringify(outfitSlots));
     }
 }

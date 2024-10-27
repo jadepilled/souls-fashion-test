@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Elden Ring Outfit Simulator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resources/styles.css">
 </head>
 <body>
     <h2>Elden Ring Outfit Simulator</h2>
@@ -17,14 +17,20 @@
     </div>
 
     <script>
-        function addItemToSimulator(item) {
-            const slotId = `${item.type}Slot`;
-            const slot = document.getElementById(slotId);
-            if (slot) {
-                slot.textContent = item.name;
-                slot.style.backgroundImage = `url('pages/eldenring/icons/${item.image}')`;
-            }
+        // Load items from localStorage to display in the outfit slots
+        function loadOutfitFromStorage() {
+            const outfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+            Object.keys(outfit).forEach(slotId => {
+                const slot = document.getElementById(slotId);
+                if (slot) {
+                    slot.textContent = outfit[slotId].name;
+                    slot.style.backgroundImage = `url('pages/eldenring/icons/${outfit[slotId].image}')`;
+                }
+            });
         }
+
+        // Initialize outfit display
+        loadOutfitFromStorage();
     </script>
 </body>
 </html>
