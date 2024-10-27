@@ -584,7 +584,7 @@ body.light-mode .feedback button:hover {
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
     background-color: rgba(34, 34, 34, 0.9); /* Dark background with some transparency */
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: center; /* Center the presets horizontally */
     gap: 20px;
@@ -597,7 +597,7 @@ body.light-mode .feedback button:hover {
     display: inline-block;
     margin: 10px;
     padding: 10px;
-    border: 1px solid #555;
+    border: none;
     background-color: #222;
     color: #fff;
     width: 200px;
@@ -619,7 +619,8 @@ body.light-mode .feedback button:hover {
 .preset-actions span {
     color: #007bff;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
+	color: inherit;
     font-weight: bold;
     padding: 5px;
     transition: color 0.3s ease;
