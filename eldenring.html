@@ -88,25 +88,59 @@
 				<span id="colorThresholdValue">100</span>
 			</div></div>
 </div>
-<div id="outfitSimulator" class="collapsible">
+<div id="outfitSimulator" align="center" class="collapsible">
     <button onclick="toggleOutfitSimulator()">Outfit Simulator</button>
-    <div id="outfitSlots">
-        <!-- Collapsible content with slots for each item type -->
-        <div class="slot" id="headSlot">Head</div>
-        <div class="slot" id="chestSlot">Chest</div>
-        <div class="slot" id="handsSlot">Hands</div>
-        <div class="slot" id="legsSlot">Legs</div>
-        <div class="slot" id="weaponsSlot">Weapon</div>
-        <div class="slot" id="shieldsSlot">Shield</div>
+    <div id="outfitSlots" class="item-grid">
+        <!-- Outfit items will be dynamically loaded here -->
     </div>
 </div>
 
 <script>
-function toggleOutfitSimulator() {
-    const simulator = document.getElementById("outfitSimulator");
-    simulator.classList.toggle("active");
-}
+    function loadOutfitFromStorage() {
+        const types = ["head", "chest", "hands", "legs", "weapons", "shields"];
+        const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+
+        const outfitContainer = document.getElementById("outfitSlots");
+        outfitContainer.innerHTML = ''; // Clear existing items
+
+        types.forEach(type => {
+            const slotId = `${type}Slot`;
+            const item = outfitSlots[slotId];
+
+            const card = document.createElement("div");
+            card.classList.add("item-card");
+
+            if (item) {
+                // Display the selected item
+                const img = document.createElement("img");
+                img.src = `pages/eldenring/icons/${item.image}`;
+                img.alt = item.name;
+
+                const name = document.createElement("p");
+                name.textContent = item.name;
+
+                card.appendChild(img);
+                card.appendChild(name);
+            } else {
+                // Display placeholder
+                const placeholder = document.createElement("p");
+                placeholder.classList.add("placeholder-tile");
+                placeholder.textContent = `No ${type} item selected`;
+                card.appendChild(placeholder);
+            }
+
+            outfitContainer.appendChild(card);
+        });
+    }
+
+    function toggleOutfitSimulator() {
+        const simulator = document.getElementById("outfitSimulator");
+        simulator.classList.toggle("active");
+    }
+
+    loadOutfitFromStorage();
 </script>
+
 
 <div class="item-grid" id="itemGrid">
     <!-- Items will be dynamically loaded here -->

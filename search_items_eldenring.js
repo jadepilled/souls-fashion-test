@@ -281,110 +281,59 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Add right-click context menu to item cards
-function createItemCard(item) {
-    const card = document.createElement('div');
-    card.classList.add('item-card');
-
-    // Right-click menu to send item to outfit simulator
-    card.addEventListener('contextmenu', (event) => {
-        event.preventDefault();
-        console.log("Right-click detected on item:", item.name); // Log for debugging
-        showContextMenu(event, item);
-    });
-
-    // Existing code for displaying the item
-    const img = document.createElement('img');
-    img.src = `pages/eldenring/icons/${item.image}`;
-    img.alt = item.name;
-
-    const titleLink = document.createElement('a');
-    titleLink.href = item.link;
-    titleLink.textContent = item.name;
-    titleLink.target = '_blank';
-    titleLink.addEventListener('click', (event) => {
-        event.stopPropagation();
-    });
-
-    const title = document.createElement('p');
-    title.appendChild(titleLink);
-
-    const colorBar = document.createElement('div');
-    colorBar.classList.add('color-bar');
-
-    // Primary and secondary color divs
-    const primaryColorDiv = document.createElement('div');
-    primaryColorDiv.style.backgroundColor = item.primaryColor;
-
-    const secondaryColorDiv1 = document.createElement('div');
-    secondaryColorDiv1.style.backgroundColor = item.secondaryColors[0];
-
-    const secondaryColorDiv2 = document.createElement('div');
-    secondaryColorDiv2.style.backgroundColor = item.secondaryColors[1];
-
-    colorBar.appendChild(primaryColorDiv);
-    colorBar.appendChild(secondaryColorDiv1);
-    colorBar.appendChild(secondaryColorDiv2);
-
-    card.appendChild(img);
-    card.appendChild(title);
-    card.appendChild(colorBar);
-
-    return card;
-}
-
-// Right-click menu logic
-function showContextMenu(event, item) {
-    console.log("Showing context menu for:", item.name); // Log for debugging
-    // Remove any existing context menu
-    document.querySelectorAll('.context-menu').forEach(menu => menu.remove());
-
-    const menu = document.createElement("div");
-    menu.classList.add("context-menu");
-    menu.style.top = `${event.pageY}px`;
-    menu.style.left = `${event.pageX}px`;
-
-    const sendToSimulatorOption = document.createElement("div");
-    sendToSimulatorOption.textContent = "Send to Outfit Simulator";
-    sendToSimulatorOption.onclick = () => {
-        console.log("Item sent to Outfit Simulator:", item.name); // Log for debugging
-        addItemToSimulator(item);
-        menu.remove();
+// Function to load outfit slots with placeholders and selected items
+function loadOutfitFromStorage() {
+    const types = ["head", "chest", "hands", "legs", "weapons", "shields"];
+    const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {
+        headSlot: null, chestSlot: null, handsSlot: null, legsSlot: null, weaponsSlot: null, shieldsSlot: null
     };
 
-    menu.appendChild(sendToSimulatorOption);
-    document.body.appendChild(menu);
+    const outfitContainer = document.getElementById("outfitSlots");
+    outfitContainer.innerHTML = ''; // Clear existing items
 
-    // Remove menu after clicking elsewhere
-    document.addEventListener("click", () => menu.remove(), { once: true });
-}
-
-// Add item to simulator slots and save to localStorage
-function addItemToSimulator(item) {
-    const slotId = `${item.type}Slot`;
-
-    // Update localStorage with the unique item type
-    const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
-    outfitSlots[slotId] = { name: item.name, image: item.image };
-    localStorage.setItem('outfitSlots', JSON.stringify(outfitSlots));
-
-    // Update the collapsible view in eldenring.html if available
-    const slot = document.getElementById(slotId);
-    if (slot) {
-        slot.innerHTML = ''; // Clear previous content
+    types.forEach(type => {
+        const slotId = `${type}Slot`;
+        const item = outfitSlots[slotId];
 
         const card = document.createElement("div");
         card.classList.add("item-card");
 
-        const img = document.createElement("img");
-        img.src = `pages/eldenring/icons/${item.image}`;
-        img.alt = item.name;
+        if (item) {
+            const img = document.createElement("img");
+            img.src = `pages/eldenring/icons/${item.image}`;
+            img.alt = item.name;
 
-        const name = document.createElement("p");
-        name.textContent = item.name;
+            const name = document.createElement("p");
+            name.textContent = item.name;
 
-        card.appendChild(img);
-        card.appendChild(name);
-        slot.appendChild(card);
-    }
+            card.appendChild(img);
+            card.appendChild(name);
+        } else {
+            const placeholder = document.createElement("p");
+            placeholder.classList.add("placeholder-tile");
+            placeholder.textContent = `No ${type} item selected`;
+            card.appendChild(placeholder);
+        }
+
+        outfitContainer.appendChild(card);
+    });
 }
+
+// Function to add item to simulator and replace placeholder with selected item
+function addItemToSimulator(item) {
+    const slotId = `${item.type}Slot`;
+
+    const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {
+        headSlot: null, chestSlot: null, handsSlot: null, legsSlot: null, weaponsSlot: null, shieldsSlot: null
+    };
+
+    outfitSlots[slotId] = { name: item.name, image: item.image };
+    localStorage.setItem('outfitSlots', JSON.stringify(outfitSlots));
+
+    loadOutfitFromStorage(); // Refresh simulator view
+}
+
+// Initialize outfit display on load
+document.addEventListener("DOMContentLoaded", () => {
+    loadOutfitFromStorage();
+});
