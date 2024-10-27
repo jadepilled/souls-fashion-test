@@ -10,27 +10,53 @@
 </head>
 <body>
     <h2>Elden Ring Outfit Simulator</h2>
-			<div id="presetButtons" class="preset-buttons">
-			<button onclick="savePreset(1)">Save to Preset 1</button>
-			<button onclick="loadPreset(1)">Load Preset 1</button>
-			<button onclick="clearPreset(1)">Clear Preset 1</button>
-			<br>
-			<button onclick="savePreset(2)">Save to Preset 2</button>
-			<button onclick="loadPreset(2)">Load Preset 2</button>
-			<button onclick="clearPreset(2)">Clear Preset 2</button>
-			<br>
-			<button onclick="savePreset(3)">Save to Preset 3</button>
-			<button onclick="loadPreset(3)">Load Preset 3</button>
-			<button onclick="clearPreset(3)">Clear Preset 3</button>
-			<br>
-			<button onclick="savePreset(4)">Save to Preset 4</button>
-			<button onclick="loadPreset(4)">Load Preset 4</button>
-			<button onclick="clearPreset(4)">Clear Preset 4</button>
-			<br>
-			<button onclick="savePreset(5)">Save to Preset 5</button>
-			<button onclick="loadPreset(5)">Load Preset 5</button>
-			<button onclick="clearPreset(5)">Clear Preset 5</button>
-		</div>
+			<div id="presetContainer" class="preset-container">
+    <div class="preset" id="preset1">
+        <h3 id="presetName1">Preset 1</h3>
+        <input type="text" placeholder="Enter preset name" onchange="setPresetName(1, this.value)">
+        <div class="preset-actions">
+            <span onclick="savePreset(1)">Save</span> | 
+            <span onclick="loadPreset(1)">Load</span> | 
+            <span onclick="clearPreset(1)">Clear</span>
+        </div>
+    </div>
+    <div class="preset" id="preset2">
+        <h3 id="presetName2">Preset 2</h3>
+        <input type="text" placeholder="Enter preset name" onchange="setPresetName(2, this.value)">
+        <div class="preset-actions">
+            <span onclick="savePreset(2)">Save</span> | 
+            <span onclick="loadPreset(2)">Load</span> | 
+            <span onclick="clearPreset(2)">Clear</span>
+        </div>
+    </div>
+    <div class="preset" id="preset3">
+        <h3 id="presetName3">Preset 3</h3>
+        <input type="text" placeholder="Enter preset name" onchange="setPresetName(3, this.value)">
+        <div class="preset-actions">
+            <span onclick="savePreset(3)">Save</span> | 
+            <span onclick="loadPreset(3)">Load</span> | 
+            <span onclick="clearPreset(3)">Clear</span>
+        </div>
+    </div>
+    <div class="preset" id="preset4">
+        <h3 id="presetName4">Preset 4</h3>
+        <input type="text" placeholder="Enter preset name" onchange="setPresetName(4, this.value)">
+        <div class="preset-actions">
+            <span onclick="savePreset(4)">Save</span> | 
+            <span onclick="loadPreset(4)">Load</span> | 
+            <span onclick="clearPreset(4)">Clear</span>
+        </div>
+    </div>
+    <div class="preset" id="preset5">
+        <h3 id="presetName5">Preset 5</h3>
+        <input type="text" placeholder="Enter preset name" onchange="setPresetName(5, this.value)">
+        <div class="preset-actions">
+            <span onclick="savePreset(5)">Save</span> | 
+            <span onclick="loadPreset(5)">Load</span> | 
+            <span onclick="clearPreset(5)">Clear</span>
+        </div>
+    </div>
+</div>
 <div id="outfitSlotsSimulator" class="simulator-grid">
     <!-- Outfit items will be dynamically loaded here -->
 </div>
@@ -89,7 +115,7 @@
 </script>
 
 <script>
-    // Save the current outfit to a preset
+    // Function to save the current outfit to a preset
     function savePreset(presetNumber) {
         // Fetch the current outfit from localStorage
         const currentOutfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
@@ -100,7 +126,7 @@
         alert(`Preset ${presetNumber} has been saved.`);
     }
 
-    // Load a preset into the simulator
+    // Function to load a preset into the simulator
     function loadPreset(presetNumber) {
         // Fetch the preset from localStorage
         const preset = JSON.parse(localStorage.getItem(`preset${presetNumber}`));
@@ -117,11 +143,25 @@
         }
     }
 
-    // Clear a preset
+    // Function to clear a preset
     function clearPreset(presetNumber) {
         // Remove the preset from localStorage
         localStorage.removeItem(`preset${presetNumber}`);
         alert(`Preset ${presetNumber} has been cleared.`);
+    }
+
+    // Function to set a custom name for a preset
+    function setPresetName(presetNumber, name) {
+        localStorage.setItem(`presetName${presetNumber}`, name);
+        document.getElementById(`presetName${presetNumber}`).textContent = name || `Preset ${presetNumber}`;
+    }
+
+    // Function to load preset names from localStorage
+    function loadPresetNames() {
+        for (let i = 1; i <= 5; i++) {
+            const name = localStorage.getItem(`presetName${i}`) || `Preset ${i}`;
+            document.getElementById(`presetName${i}`).textContent = name;
+        }
     }
 
     // Function to load outfit from localStorage and display it
@@ -168,8 +208,11 @@
         });
     }
 
-    // Call loadOutfitFromStorage to load the outfit items initially
-    document.addEventListener("DOMContentLoaded", loadOutfitFromStorage);
+    // Load preset names and outfit on page load
+    document.addEventListener("DOMContentLoaded", () => {
+        loadPresetNames();
+        loadOutfitFromStorage();
+    });
 </script>
 
 
