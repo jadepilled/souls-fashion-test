@@ -10,7 +10,7 @@
 </head>
 <body>
     <h2>Elden Ring Outfit Simulator</h2>
-    <div id="outfitSlotsSimulator" class="item-grid">
+    <div id="outfitSlotsSimulator" class="simulator-grid">
     <!-- Outfit items will be dynamically loaded here -->
 </div>
 
@@ -24,22 +24,37 @@
         const outfitSlots = document.getElementById("outfitSlotsSimulator");
         outfitSlots.innerHTML = ''; // Clear existing items
 
-        // Iterate through each slot and add the corresponding item card
-        Object.keys(outfit).forEach(slotId => {
-            const item = outfit[slotId];
-            
+        // Define the layout order
+        const layoutOrder = ["head", "weapon", "chest", "shield", "gauntlets", "legs"];
+
+        // Iterate through the defined layout order to add the corresponding item card
+        layoutOrder.forEach(slotId => {
+            const item = outfit[`${slotId}Slot`];
+
             const card = document.createElement("div");
-            card.classList.add("item-card"); // Match item styling
-            
-            const img = document.createElement("img");
-            img.src = `pages/eldenring/icons/${item.image}`;
-            img.alt = item.name;
+            card.classList.add("item-card");
 
-            const name = document.createElement("p");
-            name.textContent = item.name;
+            if (item) {
+                const img = document.createElement("img");
+                img.src = `pages/eldenring/icons/${item.image}`;
+                img.alt = item.name;
 
-            card.appendChild(img);
-            card.appendChild(name);
+                const name = document.createElement("p");
+                name.textContent = item.name;
+
+                card.appendChild(img);
+                card.appendChild(name);
+            } else {
+                // Display placeholder if no item is selected
+                const placeholder = document.createElement("p");
+                placeholder.classList.add("placeholder-tile");
+                placeholder.textContent = `No ${slotId} item selected`;
+                card.appendChild(placeholder);
+            }
+
+            // Assign an ID to each card based on its slot type for specific styling
+            card.id = `${slotId}Card`;
+
             outfitSlots.appendChild(card);
         });
     }
@@ -47,6 +62,7 @@
     // Call loadOutfitFromStorage to load the outfit items initially
     document.addEventListener("DOMContentLoaded", loadOutfitFromStorage);
 </script>
+
 
 </body>
 </html>
