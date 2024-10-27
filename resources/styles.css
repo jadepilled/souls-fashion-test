@@ -495,7 +495,13 @@ body.light-mode .feedback button:hover {
     display: flex;
     gap: 20px; /* Add padding between tiles */
 }
-
+#outfitSlots .item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+} 
 
 .placeholder-tile {
     color: #333;
