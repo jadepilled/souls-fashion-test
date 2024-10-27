@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
 	<link rel="stylesheet" href="resources/styles.css">
-    <title>Dark Souls - Fashion Souls v1.0.2</title>
+		<link rel="icon" type="image/x-icon" href="icon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicons/icon_16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicons/icon_32x32.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="favicons/icon_48x48.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicons/icon_96x96.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="favicons/icon_167x167.png"> 
+		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favicons/icon_180x180.png">
+    <title>Dark Souls - Fashion Souls v1.0.3</title>
     
 </head>
 <body>
@@ -25,7 +32,7 @@
         </div>
     </div>
     <a href="https://ko-fi.com/psyopgirl">Donate</a>
-	<a href="https://ko-fi.com/psyopgirl">Discord</a>
+	<a href="https://discord.gg/j8HHh8ffEn">Discord</a>
 	<a href="https://github.com/jadepilled/souls-fashion">Source Code</a>
 	<a href="feedback">Feedback</a>
 
@@ -40,28 +47,43 @@
 </div>
 
 <div class="search-bar">
-				<input type="text" id="searchInput" placeholder="Search for items by name or hex color...">
-			</div>
+			<input type="text" id="searchInput" placeholder="Search for items by name or hex color...">
+		</div>
+        <div class="filter-buttons">
+			<button id="headFilter">Head</button>
+            <button id="chestFilter">Chest</button>
+            <button id="handsFilter">Hands</button>
+            <button id="legsFilter">Legs</button>
+            <button id="weaponsFilter">Weapons</button>
+            <button id="shieldsFilter">Shields</button>
+            <button id="clearFilter">Clear Filters</button>
+		</div>
 
-			<div class="color-picker">
+		<div class="color-picker">
 				<label for="favcolor">Click an item to compare, or select a color:</label><p></p>
-				<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+				<input type="color" id="favcolor" name="favcolor" value="">
 			</div><p></p>
 <div class='parent'>
 	<div class='child'>	
 			<div class="slider-container">
-				<label for="secondaryWeightSlider">Weight for secondary colors:</label><br></br>
+				<label for="secondaryWeightSlider"><div class="tooltip">
+					Weight for Secondary Colors:
+					<span class="tooltip-text">Determines to what extent secondary colors are included in your color match results. Higher weight = more importance given to secondary colors.</span>
+					</div>
+</label><br></br>
 				<input type="range" id="secondaryWeightSlider" name="secondaryWeight" min="0" max="1" step="0.1" value="0.5">
 				<span id="sliderValue">0.5</span>
 			</div></div>
 	<div class='child'>
 			<div class="slider-container">
-				<label for="colorThresholdSlider">Set Color Similarity Threshold:</label><br></br>
+				<label for="colorThresholdSlider"><div class="tooltip">
+					Set Color Similarity Threshold:
+					<span class="tooltip-text">Allows you to specify how similar search results should be to your chosen color. Setting the threshold higher will include items that are less similar in color to your chosen color, and vice versa.</span>
+</div></label><br></br>
 				<input type="range" id="colorThresholdSlider" name="colorThreshold" min="0" max="500" step="10" value="100">
 				<span id="colorThresholdValue">100</span>
 			</div></div>
 </div>
-
 <div class="item-grid" id="itemGrid">
     <!-- Items will be dynamically loaded here -->
 </div>
@@ -103,6 +125,10 @@
     Copyright © Psyopgirl 2024.	<br></br>Dark Souls, Elden Ring, Bloodborne & Demon's Souls are property of Sony & FromSoftware respectively.
 </div>
 <script>
+                // Delay the navigation to the new page to allow the fade-out effect to play
+                setTimeout(() => {
+                    window.location.href = item.link; // Navigate to the new page
+                }, 500); // Match this duration with the CSS transition duration
     // Listen for visibility change to manage the fade-in effect
     document.addEventListener('visibilitychange', function() {
         if (document.visibilityState === 'visible') {

@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
 	<link rel="stylesheet" href="resources/styles.css">
-    <title>Feedback - Fashion Souls v1.0.2</title>
+		<link rel="icon" type="image/x-icon" href="icon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicons/icon_16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicons/icon_32x32.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="favicons/icon_48x48.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicons/icon_96x96.png">
+		<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="favicons/icon_167x167.png"> 
+		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favicons/icon_180x180.png">
+    <title>Feedback - Fashion Souls v1.0.3</title>
     
 </head>
 <body>
@@ -26,7 +33,7 @@
         </div>
     </div>
     <a href="https://ko-fi.com/psyopgirl">Donate</a>
-	<a href="https://ko-fi.com/psyopgirl">Discord</a>
+	<a href="https://discord.gg/j8HHh8ffEn">Discord</a>
 	<a href="https://github.com/jadepilled/souls-fashion">Source Code</a>
 	<a class="active" href="feedback.html">Feedback</a>
 
@@ -52,7 +59,17 @@
 				  <label class="form-label"  for="feedback_comments"></label>
 				  <textarea class="form-control" required rows="6" name="comments" id="feedback_comments" ></textarea>
 				</div>
-			
+				<div class="row">
+				  <div class="col">
+					<label class="form-label" for="feedback_name">Your Name (optional):</label>
+					<input type="text" required name="name" class="form-control" id="feedback_name"/>
+				  </div>
+				  
+				  <div class="col mb-4">
+					<label class="form-label" for="feedback_email">Email (optional):</label>
+					<input type="email" name="email" required class="form-control" id="feedback_email"/>
+				  </div>
+				</div>
 				<button type="submit" class="btn btn-success btn-lg" >Post</button>
 				</form>
 
