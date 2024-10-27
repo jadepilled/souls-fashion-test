@@ -583,7 +583,7 @@ body.light-mode .feedback button:hover {
     bottom: 0; /* Position at the bottom of the viewport */
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
-    background-color: rgba(34, 34, 34, 0.9); /* Dark background with some transparency */
+    background-color: rgba(34, 34, 34, 1); /* Dark background*/
     padding: 20px;
     display: flex;
     justify-content: center; /* Center the presets horizontally */
@@ -641,8 +641,8 @@ body.light-mode .feedback button:hover {
     min-height: 40px; /* Set a minimum height to ensure enough space for centered editing */
 }
 
-.preset h3:focus {
+.preset h3:focus {, 1
     outline: none;
-    background-color: rgba(34, 34, 34, 0.9); /* Match the background color of presetContainer */
+    background-color: rgba(34, 34, 34, 1); /* Match the background color of presetContainer */
     color: #fff;
 }

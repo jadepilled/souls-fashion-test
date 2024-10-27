@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="resources/styles.css">
 </head>
 <body>
+<br></br>
     <h3>Elden Ring Outfit Simulator - Fashion Souls</h3>
 			<div id="presetContainer" class="preset-container">
     <div class="preset" id="preset1">
@@ -56,7 +57,7 @@
     <!-- Outfit items will be dynamically loaded here -->
 </div>
 
-<br></br><br></br><br></br><br></br>
+<br></br><br></br>
 
 
   <script>
@@ -152,7 +153,6 @@
     function savePreset(presetNumber) {
         const currentOutfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
         localStorage.setItem(`preset${presetNumber}`, JSON.stringify(currentOutfit));
-        alert(`Preset ${presetNumber} has been saved.`);
     }
 
     // Function to load a preset into the simulator
@@ -161,16 +161,13 @@
         if (preset) {
             localStorage.setItem('outfitSlots', JSON.stringify(preset));
             loadOutfitFromStorage();
-            alert(`Preset ${presetNumber} has been loaded.`);
         } else {
-            alert(`Preset ${presetNumber} is empty.`);
         }
     }
 
     // Function to clear a preset
     function clearPreset(presetNumber) {
         localStorage.removeItem(`preset${presetNumber}`);
-        alert(`Preset ${presetNumber} has been cleared.`);
     }
 
     // Function to load outfit from localStorage and display it
