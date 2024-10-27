@@ -116,6 +116,12 @@ function createItemCard(item) {
   const card = document.createElement('div');
   card.classList.add('item-card');
 
+    // Right-click menu to send item to outfit simulator
+    card.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        showContextMenu(event, item);
+    });
+
   const img = document.createElement('img');
   img.src = `pages/eldenring/icons/${item.image}`;
   img.alt = item.name;
@@ -182,7 +188,41 @@ function createItemCard(item) {
   return card;
 }
 
+// Right-click menu logic
+function showContextMenu(event, item) {
+    const menu = document.createElement("div");
+    menu.classList.add("context-menu");
+    menu.style.top = `${event.pageY}px`;
+    menu.style.left = `${event.pageX}px`;
 
+    const sendToSimulatorOption = document.createElement("div");
+    sendToSimulatorOption.textContent = "Send to Outfit Simulator";
+    sendToSimulatorOption.onclick = () => {
+        addItemToSimulator(item);
+        menu.remove();
+    };
+
+    menu.appendChild(sendToSimulatorOption);
+    document.body.appendChild(menu);
+
+    // Remove menu after click outside
+    document.addEventListener("click", () => menu.remove(), { once: true });
+}
+
+// Add item to simulator slots and save to localStorage
+function addItemToSimulator(item) {
+    const slotId = `${item.type}Slot`;
+    const slot = document.getElementById(slotId);
+    if (slot) {
+        slot.textContent = item.name;
+        slot.style.backgroundImage = `url('pages/eldenring/icons/${item.image}')`;
+
+        // Save the outfit data in localStorage
+        const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+        outfitSlots[slotId] = { name: item.name, image: item.image };
+        localStorage.setItem('outfitSlots', JSON.stringify(outfitSlots));
+    }
+}
 
 // Add event listener for color picker, name input, slider, and color distance threshold slider
 document.getElementById('favcolor').addEventListener('change', function() {
