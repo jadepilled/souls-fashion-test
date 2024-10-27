@@ -188,8 +188,13 @@ function createItemCard(item) {
   return card;
 }
 
-// Right-click menu logic
-function showContextMenu(event, item) {
+unction showContextMenu(event, item) {
+    // Remove any existing context menu
+    const existingMenu = document.querySelector(".context-menu");
+    if (existingMenu) {
+        existingMenu.remove();
+    }
+
     const menu = document.createElement("div");
     menu.classList.add("context-menu");
     menu.style.top = `${event.pageY}px`;
@@ -205,8 +210,12 @@ function showContextMenu(event, item) {
     menu.appendChild(sendToSimulatorOption);
     document.body.appendChild(menu);
 
-    // Remove menu after click outside
-    document.addEventListener("click", () => menu.remove(), { once: true });
+    // Remove menu after clicking outside
+    document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target)) {
+            menu.remove();
+        }
+    }, { once: true });
 }
 
 // Add item to simulator slots and save to localStorage
@@ -357,6 +366,15 @@ function loadOutfitFromStorage() {
 
         outfitContainer.appendChild(card);
     });
+}
+
+function toggleOutfitSimulator() {
+    const slots = document.getElementById("outfitSlots");
+    if (slots.style.display === "none" || slots.style.display === "") {
+        slots.style.display = "block";
+    } else {
+        slots.style.display = "none";
+    }
 }
 
 // Function to add item to simulator and replace placeholder with selected item
