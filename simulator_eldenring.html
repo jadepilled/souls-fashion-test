@@ -15,7 +15,7 @@
 </div>
 
 
-    <script>
+  <script>
     function loadOutfitFromStorage() {
         // Fetch the outfit data from localStorage using the 'outfitSlots' key
         const outfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
@@ -24,8 +24,8 @@
         const outfitSlots = document.getElementById("outfitSlotsSimulator");
         outfitSlots.innerHTML = ''; // Clear existing items
 
-        // Define the layout order
-        const layoutOrder = ["head", "weapon", "chest", "shield", "gauntlets", "legs"];
+        // Define the layout order with corrected item types
+        const layoutOrder = ["head", "weapons", "chest", "shields", "hands", "legs"];
 
         // Iterate through the defined layout order to add the corresponding item card
         layoutOrder.forEach(slotId => {
@@ -62,6 +62,8 @@
     // Call loadOutfitFromStorage to load the outfit items initially
     document.addEventListener("DOMContentLoaded", loadOutfitFromStorage);
 </script>
+
+
 
 
 </body>
