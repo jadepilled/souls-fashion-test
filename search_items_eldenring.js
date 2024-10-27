@@ -120,8 +120,17 @@ function createItemCard(item) {
   img.src = `pages/eldenring/icons/${item.image}`;
   img.alt = item.name;
 
+  // Create an <a> tag for the item name with the link from JSON
+  const titleLink = document.createElement('a');
+  titleLink.href = item.link;
+  titleLink.textContent = item.name;
+  titleLink.target = '_blank'; // Open link in a new tab
+  titleLink.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevents triggering the tile's click event
+  });
+
   const title = document.createElement('p');
-  title.textContent = item.name;
+  title.appendChild(titleLink);
 
   const colorBar = document.createElement('div');
   colorBar.classList.add('color-bar');
@@ -143,10 +152,11 @@ function createItemCard(item) {
   card.addEventListener('click', () => {
     document.getElementById('favcolor').value = item.primaryColor;
     updateMatchingItems();  // Trigger the search with the selected item's primary color
-});
+  });
 
   return card;
 }
+
 
 // Add event listener for color picker, name input, slider, and color distance threshold slider
 document.getElementById('favcolor').addEventListener('change', function() {
