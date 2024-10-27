@@ -264,23 +264,6 @@ document.getElementById("clearFilter").addEventListener("click", () => {
 window.onload = fetchItems;
 
 
-// Styling for the context menu
-const style = document.createElement('style');
-style.textContent = `
-    .context-menu {
-        position: absolute;
-        background-color: white;
-        border: 1px solid #ccc;
-        z-index: 1000;
-        padding: 5px;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-        cursor: pointer;
-        font-size: 14px;
-        color: black;
-    }
-`;
-document.head.appendChild(style);
-
 // Function to load outfit slots with placeholders and selected items
 function loadOutfitFromStorage() {
     const types = ["head", "chest", "hands", "legs", "weapons", "shields"];
