@@ -260,5 +260,58 @@ document.getElementById("clearFilter").addEventListener("click", () => {
   updateMatchingItems();
 });
 
+// outfit simulator
+
+function handleRightClick(event, item) {
+    event.preventDefault();
+    const menu = document.createElement("div");
+    menu.classList.add("context-menu");
+
+    for (let i = 1; i <= 10; i++) {
+        const option = document.createElement("div");
+        option.textContent = `Add to Preset ${i}`;
+        option.onclick = () => addItemToPreset(item, i);
+        menu.appendChild(option);
+    }
+
+    document.body.appendChild(menu);
+    menu.style.top = `${event.clientY}px`;
+    menu.style.left = `${event.clientX}px`;
+
+    document.addEventListener("click", () => menu.remove(), { once: true });
+}
+
+function addItemToPreset(item, presetNumber) {
+    const outfits = JSON.parse(localStorage.getItem("outfits")) || Array(10).fill({});
+    outfits[presetNumber - 1][item.type] = item; // Add item to the correct type slot
+    localStorage.setItem("outfits", JSON.stringify(outfits));
+    updateOutfitSimulatorContent();
+}
+
+function updateOutfitSimulatorContent() {
+    const outfits = JSON.parse(localStorage.getItem("outfits")) || Array(10).fill({});
+    const content = document.getElementById("outfitSimulatorContent");
+    content.innerHTML = "";
+
+    outfits.forEach((outfit, index) => {
+        const outfitDiv = document.createElement("div");
+        outfitDiv.classList.add("outfit");
+        outfitDiv.textContent = `Preset ${index + 1}`;
+        
+        for (const itemType in outfit) {
+            const itemDiv = document.createElement("div");
+            itemDiv.textContent = `${itemType}: ${outfit[itemType].name}`;
+            outfitDiv.appendChild(itemDiv);
+        }
+        content.appendChild(outfitDiv);
+    });
+}
+
+function toggleOutfitSimulator() {
+    const content = document.getElementById("outfitSimulatorContent");
+    content.style.display = content.style.display === "none" ? "block" : "none";
+}
+
 // Fetch items on page load
 window.onload = fetchItems;
+

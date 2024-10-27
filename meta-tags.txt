@@ -1,0 +1,31 @@
+    
+
+index.html
+		<meta name="description" content="Discover stylish, color-matching outfits for your favorite SoulsBorne games with souls.fashion. Find coordinated looks for Elden Ring, Dark Souls 1-3, Bloodborne, and more – your go-to tool for in-game fashion inspiration!">
+		<meta property="og:site_name" content="Fashion Souls" />
+	
+eldenring.html
+		
+		<meta name="description" content="Design perfect color-matching outfits in Elden Ring with souls.fashion. Explore coordinated armor sets, weapons, and accessories for a unique style that suits your Tarnished – the ultimate Elden Ring fashion tool!">
+		<meta property="og:site_name" content="Elden Ring - Fashion Souls" />
+	
+ds1.html	
+		<meta name="description" content="Style your Undead in Dark Souls Remastered & Prepare to Die Edition with souls.fashion, the tool for finding color-coordinated armor and weapons. Create iconic looks as you journey through Lordran with gear that stands out.">
+		<meta property="og:site_name" content="Dark Souls - Fashion Souls" />
+
+ds2.html
+		<meta name="description" content="Transform your journey in Dark Souls II with souls.fashion, the ultimate Dark Souls II fashion tool. Find matching armor and weapons to create a distinct look for your character as you explore the kingdom of Drangleic.">
+		<meta property="og:site_name" content="Dark Souls II - Fashion Souls" />
+
+ds3.html
+		<meta name="description" content="Unleash your Ashen One’s true colors in Dark Souls III with souls.fashion. This tool helps you discover coordinated armor sets and weapons, creating unforgettable looks for your journey through Lothric.">
+		<meta property="og:site_name" content="Dark Souls III - Fashion Souls" />
+
+demonssouls.html
+		<meta name="description" content="Elevate your Slayer’s style in Demon’s Souls with souls.fashion. Use this tool to find color-matching armor and weapons, creating a unique look for your character as you conquer Boletaria in style.">
+		<meta property="og:site_name" content="Demon's Souls - Fashion Souls" />
+
+bloodborne.html
+		<meta name="description" content="Up your Hunter's style with souls.fashion, the tool for finding color-matching attire and weapons in Bloodborne. Create a striking look as you explore Yharnam and face the nightmarish beasts in fashion.">
+		<meta property="og:site_name" content="Bloodborne - Fashion Souls" />
+

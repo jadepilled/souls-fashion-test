@@ -62,7 +62,9 @@
 		</div>
 
 		<div class="color-picker">
-				<label for="favcolor">Click an item to compare, or select a color:</label><p></p>
+				<label for="favcolor"><div class="tooltip">
+		Click an item to compare, or select a color:
+					<span class="tooltip-text">Colors displayed below items are the item's primary color, then two secondary colors. Clicking an item tile or image will use its primary color by default to search for similar colors. You may also click the secondary colors to search using those instead. Click an item name to open the wiki page for that item.</span></div></label><p></p>
 				<input type="color" id="favcolor" name="favcolor" value="">
 			</div><p></p>
 <div class='parent'>
@@ -86,11 +88,20 @@
 				<span id="colorThresholdValue">100</span>
 			</div></div>
 </div>
+<div id="outfitSimulatorPanel" class="collapsible">
+    <button onclick="toggleOutfitSimulator()">Outfit Simulator</button>
+    <div id="outfitSimulatorContent" style="display:none;">
+        <!-- Display saved outfits here -->
+    </div>
+</div>
+<script src="outfit_simulator_eldenring.js"></script>
+
 <div class="item-grid" id="itemGrid">
     <!-- Items will be dynamically loaded here -->
 </div>
 
 <script src="search_items_eldenring.js"></script>
+<script src="outfit_simulator_eldenring.js"></script>
 <script>
     const modeToggle = document.getElementById('modeToggle');
     const body = document.body;

@@ -438,7 +438,7 @@ body.light-mode .feedback button:hover {
 
 	.tooltip-text {
 		visibility: hidden;
-		width: 300px; /* Adjust as needed */
+		width: 400px; /* Adjust as needed */
 		background-color: #242424;
 		color: #fff;
 		text-align: center;
