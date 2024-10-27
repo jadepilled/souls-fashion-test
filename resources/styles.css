@@ -632,11 +632,17 @@ body.light-mode .feedback button:hover {
 
 .preset h3 {
     cursor: text;
-    border-bottom: 1px dashed #555; /* Indicates editable area */
     padding-bottom: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px; /* Set a minimum height to ensure enough space for centered editing */
 }
 
 .preset h3:focus {
     outline: none;
-    background-color: #333;
+    background-color: rgba(34, 34, 34, 0.9); /* Match the background color of presetContainer */
+    color: #fff;
 }
