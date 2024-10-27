@@ -264,6 +264,23 @@ document.getElementById("clearFilter").addEventListener("click", () => {
 window.onload = fetchItems;
 
 
+// Styling for the context menu
+const style = document.createElement('style');
+style.textContent = `
+    .context-menu {
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        z-index: 1000;
+        padding: 5px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        cursor: pointer;
+        font-size: 14px;
+        color: black;
+    }
+`;
+document.head.appendChild(style);
+
 // Add right-click context menu to item cards
 function createItemCard(item) {
     const card = document.createElement('div');
@@ -272,6 +289,7 @@ function createItemCard(item) {
     // Right-click menu to send item to outfit simulator
     card.addEventListener('contextmenu', (event) => {
         event.preventDefault();
+        console.log("Right-click detected on item:", item.name); // Log for debugging
         showContextMenu(event, item);
     });
 
@@ -317,6 +335,10 @@ function createItemCard(item) {
 
 // Right-click menu logic
 function showContextMenu(event, item) {
+    console.log("Showing context menu for:", item.name); // Log for debugging
+    // Remove any existing context menu
+    document.querySelectorAll('.context-menu').forEach(menu => menu.remove());
+
     const menu = document.createElement("div");
     menu.classList.add("context-menu");
     menu.style.top = `${event.pageY}px`;
@@ -325,6 +347,7 @@ function showContextMenu(event, item) {
     const sendToSimulatorOption = document.createElement("div");
     sendToSimulatorOption.textContent = "Send to Outfit Simulator";
     sendToSimulatorOption.onclick = () => {
+        console.log("Item sent to Outfit Simulator:", item.name); // Log for debugging
         addItemToSimulator(item);
         menu.remove();
     };
@@ -332,7 +355,7 @@ function showContextMenu(event, item) {
     menu.appendChild(sendToSimulatorOption);
     document.body.appendChild(menu);
 
-    // Remove menu after click outside
+    // Remove menu after clicking elsewhere
     document.addEventListener("click", () => menu.remove(), { once: true });
 }
 
