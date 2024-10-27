@@ -12,8 +12,7 @@
     <h2>Elden Ring Outfit Simulator</h2>
 			<div id="presetContainer" class="preset-container">
     <div class="preset" id="preset1">
-        <h3 id="presetName1">Preset 1</h3>
-        <input type="text" placeholder="Enter preset name" onchange="setPresetName(1, this.value)">
+        <h3 id="presetName1" class="editable-preset-name" onclick="editPresetName(1)" contenteditable="true">Preset 1</h3>
         <div class="preset-actions">
             <span onclick="savePreset(1)">Save</span> | 
             <span onclick="loadPreset(1)">Load</span> | 
@@ -21,8 +20,7 @@
         </div>
     </div>
     <div class="preset" id="preset2">
-        <h3 id="presetName2">Preset 2</h3>
-        <input type="text" placeholder="Enter preset name" onchange="setPresetName(2, this.value)">
+        <h3 id="presetName2" class="editable-preset-name" onclick="editPresetName(2)" contenteditable="true">Preset 2</h3>
         <div class="preset-actions">
             <span onclick="savePreset(2)">Save</span> | 
             <span onclick="loadPreset(2)">Load</span> | 
@@ -30,8 +28,7 @@
         </div>
     </div>
     <div class="preset" id="preset3">
-        <h3 id="presetName3">Preset 3</h3>
-        <input type="text" placeholder="Enter preset name" onchange="setPresetName(3, this.value)">
+        <h3 id="presetName3" class="editable-preset-name" onclick="editPresetName(3)" contenteditable="true">Preset 3</h3>
         <div class="preset-actions">
             <span onclick="savePreset(3)">Save</span> | 
             <span onclick="loadPreset(3)">Load</span> | 
@@ -39,8 +36,7 @@
         </div>
     </div>
     <div class="preset" id="preset4">
-        <h3 id="presetName4">Preset 4</h3>
-        <input type="text" placeholder="Enter preset name" onchange="setPresetName(4, this.value)">
+        <h3 id="presetName4" class="editable-preset-name" onclick="editPresetName(4)" contenteditable="true">Preset 4</h3>
         <div class="preset-actions">
             <span onclick="savePreset(4)">Save</span> | 
             <span onclick="loadPreset(4)">Load</span> | 
@@ -48,8 +44,7 @@
         </div>
     </div>
     <div class="preset" id="preset5">
-        <h3 id="presetName5">Preset 5</h3>
-        <input type="text" placeholder="Enter preset name" onchange="setPresetName(5, this.value)">
+        <h3 id="presetName5" class="editable-preset-name" onclick="editPresetName(5)" contenteditable="true">Preset 5</h3>
         <div class="preset-actions">
             <span onclick="savePreset(5)">Save</span> | 
             <span onclick="loadPreset(5)">Load</span> | 
@@ -57,6 +52,10 @@
         </div>
     </div>
 </div>
+<div id="outfitSlotsSimulator" class="simulator-grid">
+    <!-- Outfit items will be dynamically loaded here -->
+</div>
+
 <div id="outfitSlotsSimulator" class="simulator-grid">
     <!-- Outfit items will be dynamically loaded here -->
 </div>
@@ -118,25 +117,16 @@
 <script>
     // Function to save the current outfit to a preset
     function savePreset(presetNumber) {
-        // Fetch the current outfit from localStorage
         const currentOutfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
-
-        // Save the current outfit to the specific preset key in localStorage
         localStorage.setItem(`preset${presetNumber}`, JSON.stringify(currentOutfit));
-
         alert(`Preset ${presetNumber} has been saved.`);
     }
 
     // Function to load a preset into the simulator
     function loadPreset(presetNumber) {
-        // Fetch the preset from localStorage
         const preset = JSON.parse(localStorage.getItem(`preset${presetNumber}`));
-
         if (preset) {
-            // Save the selected preset as the current outfit
             localStorage.setItem('outfitSlots', JSON.stringify(preset));
-
-            // Reload the outfit display
             loadOutfitFromStorage();
             alert(`Preset ${presetNumber} has been loaded.`);
         } else {
@@ -146,15 +136,28 @@
 
     // Function to clear a preset
     function clearPreset(presetNumber) {
-        // Remove the preset from localStorage
         localStorage.removeItem(`preset${presetNumber}`);
         alert(`Preset ${presetNumber} has been cleared.`);
     }
 
     // Function to set a custom name for a preset
-    function setPresetName(presetNumber, name) {
-        localStorage.setItem(`presetName${presetNumber}`, name);
-        document.getElementById(`presetName${presetNumber}`).textContent = name || `Preset ${presetNumber}`;
+    function editPresetName(presetNumber) {
+        const presetNameElement = document.getElementById(`presetName${presetNumber}`);
+
+        // Save the updated name when focus is lost
+        presetNameElement.addEventListener("blur", () => {
+            const name = presetNameElement.textContent.trim();
+            localStorage.setItem(`presetName${presetNumber}`, name);
+            presetNameElement.textContent = name || `Preset ${presetNumber}`;
+        });
+
+        // Save the updated name when the Enter key is pressed
+        presetNameElement.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent newline
+                presetNameElement.blur(); // Trigger blur event to save
+            }
+        });
     }
 
     // Function to load preset names from localStorage
@@ -167,20 +170,14 @@
 
     // Function to load outfit from localStorage and display it
     function loadOutfitFromStorage() {
-        // Fetch the outfit data from localStorage using the 'outfitSlots' key
         const outfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
-        
-        // Get the outfitSlotsSimulator div by its ID
         const outfitSlots = document.getElementById("outfitSlotsSimulator");
         outfitSlots.innerHTML = ''; // Clear existing items
 
-        // Define the layout order with corrected item types
         const layoutOrder = ["head", "weapons", "chest", "shields", "hands", "legs"];
 
-        // Iterate through the defined layout order to add the corresponding item card
         layoutOrder.forEach(slotId => {
             const item = outfit[`${slotId}Slot`];
-
             const card = document.createElement("div");
             card.classList.add("item-card");
 
@@ -195,16 +192,13 @@
                 card.appendChild(img);
                 card.appendChild(name);
             } else {
-                // Display placeholder if no item is selected
                 const placeholder = document.createElement("p");
                 placeholder.classList.add("placeholder-tile");
                 placeholder.textContent = `No ${slotId} item selected`;
                 card.appendChild(placeholder);
             }
 
-            // Assign an ID to each card based on its slot type for specific styling
             card.id = `${slotId}Card`;
-
             outfitSlots.appendChild(card);
         });
     }
@@ -215,8 +209,6 @@
         loadOutfitFromStorage();
     });
 </script>
-
-
 
 </body>
 </html>

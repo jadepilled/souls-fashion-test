@@ -629,3 +629,14 @@ body.light-mode .feedback button:hover {
 .preset-actions span:hover {
     color: #0056b3;
 }
+
+.preset h3 {
+    cursor: text;
+    border-bottom: 1px dashed #555; /* Indicates editable area */
+    padding-bottom: 5px;
+}
+
+.preset h3:focus {
+    outline: none;
+    background-color: #333;
+}
