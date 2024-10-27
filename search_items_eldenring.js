@@ -188,7 +188,7 @@ function createItemCard(item) {
   return card;
 }
 
-unction showContextMenu(event, item) {
+function showContextMenu(event, item) {
     // Remove any existing context menu
     const existingMenu = document.querySelector(".context-menu");
     if (existingMenu) {
