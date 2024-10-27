@@ -260,58 +260,100 @@ document.getElementById("clearFilter").addEventListener("click", () => {
   updateMatchingItems();
 });
 
-// outfit simulator
+// Fetch items on page load
+window.onload = fetchItems;
 
-function handleRightClick(event, item) {
-    event.preventDefault();
+// Add right-click context menu to item cards
+function createItemCard(item) {
+    const card = document.createElement('div');
+    card.classList.add('item-card');
+    card.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        showContextMenu(event, item);
+    });
+
+    // Existing code for displaying the item
+    const img = document.createElement('img');
+    img.src = `pages/eldenring/icons/${item.image}`;
+    img.alt = item.name;
+
+    const titleLink = document.createElement('a');
+    titleLink.href = item.link;
+    titleLink.textContent = item.name;
+    titleLink.target = '_blank';
+    titleLink.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
+    const title = document.createElement('p');
+    title.appendChild(titleLink);
+
+    const colorBar = document.createElement('div');
+    colorBar.classList.add('color-bar');
+
+    const primaryColorDiv = document.createElement('div');
+    primaryColorDiv.style.backgroundColor = item.primaryColor;
+    primaryColorDiv.addEventListener('click', (event) => {
+        event.stopPropagation();
+        document.getElementById('favcolor').value = item.primaryColor;
+        updateMatchingItems();
+    });
+
+    const secondaryColorDiv1 = document.createElement('div');
+    secondaryColorDiv1.style.backgroundColor = item.secondaryColors[0];
+    secondaryColorDiv1.addEventListener('click', (event) => {
+        event.stopPropagation();
+        document.getElementById('favcolor').value = item.secondaryColors[0];
+        updateMatchingItems();
+    });
+
+    const secondaryColorDiv2 = document.createElement('div');
+    secondaryColorDiv2.style.backgroundColor = item.secondaryColors[1];
+    secondaryColorDiv2.addEventListener('click', (event) => {
+        event.stopPropagation();
+        document.getElementById('favcolor').value = item.secondaryColors[1];
+        updateMatchingItems();
+    });
+
+    colorBar.appendChild(primaryColorDiv);
+    colorBar.appendChild(secondaryColorDiv1);
+    colorBar.appendChild(secondaryColorDiv2);
+
+    card.appendChild(img);
+    card.appendChild(title);
+    card.appendChild(colorBar);
+    card.addEventListener('click', () => {
+        document.getElementById('favcolor').value = item.primaryColor;
+        updateMatchingItems();
+    });
+
+    return card;
+}
+
+function showContextMenu(event, item) {
     const menu = document.createElement("div");
     menu.classList.add("context-menu");
+    menu.style.top = `${event.pageY}px`;
+    menu.style.left = `${event.pageX}px`;
 
-    for (let i = 1; i <= 10; i++) {
-        const option = document.createElement("div");
-        option.textContent = `Add to Preset ${i}`;
-        option.onclick = () => addItemToPreset(item, i);
-        menu.appendChild(option);
-    }
+    const sendToSimulatorOption = document.createElement("div");
+    sendToSimulatorOption.textContent = "Send to Outfit Simulator";
+    sendToSimulatorOption.onclick = () => {
+        addItemToSimulator(item);
+        menu.remove();
+    };
 
+    menu.appendChild(sendToSimulatorOption);
     document.body.appendChild(menu);
-    menu.style.top = `${event.clientY}px`;
-    menu.style.left = `${event.clientX}px`;
 
     document.addEventListener("click", () => menu.remove(), { once: true });
 }
 
-function addItemToPreset(item, presetNumber) {
-    const outfits = JSON.parse(localStorage.getItem("outfits")) || Array(10).fill({});
-    outfits[presetNumber - 1][item.type] = item; // Add item to the correct type slot
-    localStorage.setItem("outfits", JSON.stringify(outfits));
-    updateOutfitSimulatorContent();
+function addItemToSimulator(item) {
+    const slotId = `${item.type}Slot`;
+    const slot = document.getElementById(slotId);
+    if (slot) {
+        slot.textContent = item.name;
+        slot.style.backgroundImage = `url('pages/eldenring/icons/${item.image}')`;
+    }
 }
-
-function updateOutfitSimulatorContent() {
-    const outfits = JSON.parse(localStorage.getItem("outfits")) || Array(10).fill({});
-    const content = document.getElementById("outfitSimulatorContent");
-    content.innerHTML = "";
-
-    outfits.forEach((outfit, index) => {
-        const outfitDiv = document.createElement("div");
-        outfitDiv.classList.add("outfit");
-        outfitDiv.textContent = `Preset ${index + 1}`;
-        
-        for (const itemType in outfit) {
-            const itemDiv = document.createElement("div");
-            itemDiv.textContent = `${itemType}: ${outfit[itemType].name}`;
-            outfitDiv.appendChild(itemDiv);
-        }
-        content.appendChild(outfitDiv);
-    });
-}
-
-function toggleOutfitSimulator() {
-    const content = document.getElementById("outfitSimulatorContent");
-    content.style.display = content.style.display === "none" ? "block" : "none";
-}
-
-// Fetch items on page load
-window.onload = fetchItems;
-

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elden Ring Outfit Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Elden Ring Outfit Simulator</h2>
+    <div id="outfitSlots">
+        <div class="slot" id="headSlot">Head</div>
+        <div class="slot" id="chestSlot">Chest</div>
+        <div class="slot" id="handsSlot">Hands</div>
+        <div class="slot" id="legsSlot">Legs</div>
+        <div class="slot" id="weaponsSlot">Weapon</div>
+        <div class="slot" id="shieldsSlot">Shield</div>
+    </div>
+
+    <script>
+        function addItemToSimulator(item) {
+            const slotId = `${item.type}Slot`;
+            const slot = document.getElementById(slotId);
+            if (slot) {
+                slot.textContent = item.name;
+                slot.style.backgroundImage = `url('pages/eldenring/icons/${item.image}')`;
+            }
+        }
+    </script>
+</body>
+</html>

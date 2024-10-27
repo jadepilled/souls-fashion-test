@@ -88,20 +88,31 @@
 				<span id="colorThresholdValue">100</span>
 			</div></div>
 </div>
-<div id="outfitSimulatorPanel" class="collapsible">
+<div id="outfitSimulator" class="collapsible">
     <button onclick="toggleOutfitSimulator()">Outfit Simulator</button>
-    <div id="outfitSimulatorContent" style="display:none;">
-        <!-- Display saved outfits here -->
+    <div id="outfitSlots">
+        <!-- Collapsible content with slots for each item type -->
+        <div class="slot" id="headSlot">Head</div>
+        <div class="slot" id="chestSlot">Chest</div>
+        <div class="slot" id="handsSlot">Hands</div>
+        <div class="slot" id="legsSlot">Legs</div>
+        <div class="slot" id="weaponsSlot">Weapon</div>
+        <div class="slot" id="shieldsSlot">Shield</div>
     </div>
 </div>
-<script src="outfit_simulator_eldenring.js"></script>
+
+<script>
+function toggleOutfitSimulator() {
+    const simulator = document.getElementById("outfitSimulator");
+    simulator.classList.toggle("active");
+}
+</script>
 
 <div class="item-grid" id="itemGrid">
     <!-- Items will be dynamically loaded here -->
 </div>
 
 <script src="search_items_eldenring.js"></script>
-<script src="outfit_simulator_eldenring.js"></script>
 <script>
     const modeToggle = document.getElementById('modeToggle');
     const body = document.body;
