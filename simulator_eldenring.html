@@ -16,31 +16,37 @@
 
 
     <script>
-        function loadOutfitFromStorage() {
-            const outfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
-            const outfitSlots = document.getElementById("outfitSlots");
-            outfitSlots.innerHTML = ''; // Clear existing items
+    function loadOutfitFromStorage() {
+        // Fetch the outfit data from localStorage using the 'outfitSlots' key
+        const outfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+        
+        // Get the outfitSlotsSimulator div by its ID
+        const outfitSlots = document.getElementById("outfitSlotsSimulator");
+        outfitSlots.innerHTML = ''; // Clear existing items
 
-            Object.keys(outfit).forEach(slotId => {
-                const item = outfit[slotId];
-                
-                const card = document.createElement("div");
-                card.classList.add("item-card"); // Match item styling
-                
-                const img = document.createElement("img");
-                img.src = `pages/eldenring/icons/${item.image}`;
-                img.alt = item.name;
+        // Iterate through each slot and add the corresponding item card
+        Object.keys(outfit).forEach(slotId => {
+            const item = outfit[slotId];
+            
+            const card = document.createElement("div");
+            card.classList.add("item-card"); // Match item styling
+            
+            const img = document.createElement("img");
+            img.src = `pages/eldenring/icons/${item.image}`;
+            img.alt = item.name;
 
-                const name = document.createElement("p");
-                name.textContent = item.name;
+            const name = document.createElement("p");
+            name.textContent = item.name;
 
-                card.appendChild(img);
-                card.appendChild(name);
-                outfitSlots.appendChild(card);
-            });
-        }
+            card.appendChild(img);
+            card.appendChild(name);
+            outfitSlots.appendChild(card);
+        });
+    }
 
-        loadOutfitFromStorage(); // Initialize with saved items
-    </script>
+    // Call loadOutfitFromStorage to load the outfit items initially
+    document.addEventListener("DOMContentLoaded", loadOutfitFromStorage);
+</script>
+
 </body>
 </html>
