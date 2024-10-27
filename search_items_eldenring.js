@@ -362,14 +362,29 @@ function showContextMenu(event, item) {
 // Add item to simulator slots and save to localStorage
 function addItemToSimulator(item) {
     const slotId = `${item.type}Slot`;
+
+    // Update localStorage with the unique item type
+    const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+    outfitSlots[slotId] = { name: item.name, image: item.image };
+    localStorage.setItem('outfitSlots', JSON.stringify(outfitSlots));
+
+    // Update the collapsible view in eldenring.html if available
     const slot = document.getElementById(slotId);
     if (slot) {
-        slot.textContent = item.name;
-        slot.style.backgroundImage = `url('pages/eldenring/icons/${item.image}')`;
+        slot.innerHTML = ''; // Clear previous content
 
-        // Save the outfit data in localStorage
-        const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
-        outfitSlots[slotId] = { name: item.name, image: item.image };
-        localStorage.setItem('outfitSlots', JSON.stringify(outfitSlots));
+        const card = document.createElement("div");
+        card.classList.add("item-card");
+
+        const img = document.createElement("img");
+        img.src = `pages/eldenring/icons/${item.image}`;
+        img.alt = item.name;
+
+        const name = document.createElement("p");
+        name.textContent = item.name;
+
+        card.appendChild(img);
+        card.appendChild(name);
+        slot.appendChild(card);
     }
 }

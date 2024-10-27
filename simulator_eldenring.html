@@ -2,35 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral">
+	<link rel="stylesheet" href="resources/styles.css">
     <title>Elden Ring Outfit Simulator</title>
     <link rel="stylesheet" href="resources/styles.css">
 </head>
 <body>
     <h2>Elden Ring Outfit Simulator</h2>
-    <div id="outfitSlots">
-        <div class="slot" id="headSlot">Head</div>
-        <div class="slot" id="chestSlot">Chest</div>
-        <div class="slot" id="handsSlot">Hands</div>
-        <div class="slot" id="legsSlot">Legs</div>
-        <div class="slot" id="weaponsSlot">Weapon</div>
-        <div class="slot" id="shieldsSlot">Shield</div>
+    <div id="outfitSlots" class="item-grid">
+        <!-- Outfit items will be dynamically loaded here -->
     </div>
 
     <script>
-        // Load items from localStorage to display in the outfit slots
         function loadOutfitFromStorage() {
             const outfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+            const outfitSlots = document.getElementById("outfitSlots");
+            outfitSlots.innerHTML = ''; // Clear existing items
+
             Object.keys(outfit).forEach(slotId => {
-                const slot = document.getElementById(slotId);
-                if (slot) {
-                    slot.textContent = outfit[slotId].name;
-                    slot.style.backgroundImage = `url('pages/eldenring/icons/${outfit[slotId].image}')`;
-                }
+                const item = outfit[slotId];
+                
+                const card = document.createElement("div");
+                card.classList.add("item-card"); // Match item styling
+                
+                const img = document.createElement("img");
+                img.src = `pages/eldenring/icons/${item.image}`;
+                img.alt = item.name;
+
+                const name = document.createElement("p");
+                name.textContent = item.name;
+
+                card.appendChild(img);
+                card.appendChild(name);
+                outfitSlots.appendChild(card);
             });
         }
 
-        // Initialize outfit display
-        loadOutfitFromStorage();
+        loadOutfitFromStorage(); // Initialize with saved items
     </script>
 </body>
 </html>
