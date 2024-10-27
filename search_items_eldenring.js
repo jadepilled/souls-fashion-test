@@ -371,7 +371,7 @@ function loadOutfitFromStorage() {
 function toggleOutfitSimulator() {
     const slots = document.getElementById("outfitSlots");
     if (slots.style.display === "none" || slots.style.display === "") {
-        slots.style.display = "block";
+        slots.style.display = "grid"; // Set display to grid for horizontal alignment
     } else {
         slots.style.display = "none";
     }

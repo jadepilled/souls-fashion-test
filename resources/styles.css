@@ -146,6 +146,7 @@ body.light-mode .search-bar input {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-items: center;
   justify-content: center; /* centers items horizontally */
   align-items: center; /* centers items vertically */
 }
