@@ -565,13 +565,13 @@ body.light-mode .feedback button:hover {
 
 /* Larger styles for simulator items */
 #outfitSlotsSimulator .item-card {
-    font-size: 18px; /* Larger text */
-    width: 200px; /* Increase card width */
-    height: 280px; /* Increase card height */
+    font-size: 16px; /* Larger text */
+    width: 180px; /* Increase card width */
+    height: 250px; /* Increase card height */
     padding: 20px; /* More padding */
 }
 
 #outfitSlotsSimulator .item-card img {
     max-width: 100%; 
-    height: 200px; /* Larger icon size */
+    height: 160px; /* Larger icon size */
 }
