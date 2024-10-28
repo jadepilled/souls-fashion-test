@@ -204,9 +204,11 @@
 </script>
 
 <script>
-    // Variable to track the slot ID of the right-clicked item
+    // Variables to track the right-clicked slot ID or item
     let rightClickedSlotId = null;
+    let rightClickedItem = null;
 
+    // Load outfit slots from localStorage
     function loadOutfitFromStorage() {
         const types = ["head", "chest", "hands", "legs", "weapons", "shields"];
         const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
@@ -241,10 +243,10 @@
                 card.appendChild(placeholder);
             }
 
-            // Add right-click (contextmenu) event listener to show the custom context menu
+            // Add right-click (contextmenu) event listener to show the remove item context menu
             card.addEventListener('contextmenu', (event) => {
                 event.preventDefault();
-                showContextMenu(event, slotId);
+                showRemoveItemContextMenu(event, slotId);
             });
 
             outfitContainer.appendChild(card);
@@ -259,14 +261,18 @@
         });
     }
 
-    // Function to show the custom context menu
-    function showContextMenu(event, slotId) {
+    // Function to show the custom context menu for removing an item
+    function showRemoveItemContextMenu(event, slotId) {
         rightClickedSlotId = slotId; // Store the slotId for later use
 
         const contextMenu = document.getElementById('contextMenu');
+        contextMenu.innerHTML = '<ul><li id="removeItemOption">Remove Item</li></ul>';
         contextMenu.style.top = `${event.pageY}px`;
         contextMenu.style.left = `${event.pageX}px`;
         contextMenu.style.display = 'block';
+
+        // Add event listener to the "Remove Item" option
+        document.getElementById('removeItemOption').addEventListener('click', removeItemFromOutfit);
     }
 
     // Function to remove an item from the current outfit
@@ -289,13 +295,56 @@
         document.getElementById('contextMenu').style.display = 'none';
     }
 
-    // Attach an event listener to the "Remove Item" option in the context menu
-    document.getElementById('removeItemOption').addEventListener('click', removeItemFromOutfit);
+    // Function to show the custom context menu for sending an item to the outfit simulator
+    function showSendToSimulatorContextMenu(event, item) {
+        rightClickedItem = item; // Store the item for later use
 
-    // Load outfit from localStorage and display it on page load
-    document.addEventListener("DOMContentLoaded", () => {
-        loadOutfitFromStorage();
-    });
+        const contextMenu = document.getElementById('contextMenu');
+        contextMenu.innerHTML = '<ul><li id="sendToSimulatorOption">Send to Outfit Simulator</li></ul>';
+        contextMenu.style.top = `${event.pageY}px`;
+        contextMenu.style.left = `${event.pageX}px`;
+        contextMenu.style.display = 'block';
+
+        // Add event listener to the "Send to Outfit Simulator" option
+        document.getElementById('sendToSimulatorOption').addEventListener('click', sendItemToOutfitSimulator);
+    }
+
+    // Function to send an item to the outfit simulator
+    function sendItemToOutfitSimulator() {
+        if (rightClickedItem) {
+            addItemToSimulator(rightClickedItem);
+        }
+
+        // Hide the context menu after sending the item
+        document.getElementById('contextMenu').style.display = 'none';
+    }
+
+    // Add event listeners to item cards in itemGrid for sending items to the outfit simulator
+    function initializeItemGrid() {
+        const itemGrid = document.getElementById('itemGrid');
+
+        itemGrid.querySelectorAll('.item-card').forEach(card => {
+            card.addEventListener('contextmenu', (event) => {
+                event.preventDefault();
+
+                // Find the item in the `items` array
+                const itemName = card.querySelector('p a').textContent;
+                const item = items.find(i => i.name === itemName);
+
+                if (item) {
+                    showSendToSimulatorContextMenu(event, item);
+                }
+            });
+        });
+    }
+
+    // Run when the items are loaded into the grid
+    window.onload = function() {
+        fetchItems().then(() => {
+            loadOutfitFromStorage();
+            initializeItemGrid();
+        });
+    };
 </script>
 
 
