@@ -671,3 +671,36 @@ body.light-mode .feedback button:hover {
 #backToMain:hover {
     color: #0056b3;
 }
+
+
+#backToMain {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: #inherit;
+    text-decoration: underline;
+    z-index: 1100; /* Ensure it is above other elements */
+    cursor: pointer;
+    background-color: rgba(34, 34, 34, 0.9);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+.centered-link {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#downloadImageLink {
+    color: #inherit;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+#downloadImageLink:hover {
+    color: #0056b3;
+}
