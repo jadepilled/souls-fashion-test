@@ -44,162 +44,152 @@ You may alter, adapt, or build upon the source material, as long as attribution 
 > [ver 1.0.3] - *search by type function added for all games. mobile device support improved. Improved color database for the following items:* 
 <details>
   <summary>Item List</summary>
-+ Scaled Set  
-+ Ronin's Set  
-+ All Knowing Set  
-+ Banished Knight Set  
-+ Carian Knight Set  
-+ Knight Helm / Knight Set  
-+ Vagabond Knight Helm / Set  
-+ Prisoner Iron Mask  
-+ Exile Gauntlets  
-+ Fire Prelate Armor (Altered)  
-+ Gelmir Knight Set  
-+ Uchigatana  
-+ Veteran's Prosthesis  
-+ Black Knife Set  
-+ Godrick Knight Greaves  
-+ Haligtree Knight Set  
-+ Eleonora's Poleblade  
-+ Verdigris Set  
-+ Lionel's Armor (Altered)  
-+ Serpent Crest Shield  
-+ Ants Skull Plate  
-+ Gargoyles Black Blade  
-+ Death Knight Set  
-+ Dancer's Dress (Altered)  
-+ Whip  
-+ Black Steel Greathammer  
-+ Lord of Blood's Robe (Altered)  
-+ Meteoric Ore Blade  
-+ Gaius's Set  
-+ Maternal Staff  
-+ Omen Set  
-+ Cerulean Scarab  
-+ Ascetic Set  
-+ Preceptors Big Hat  
-+ Consorts Mask  
-+ Aristocrat Hat  
-+ Euporia  
-+ Deaths Poker  
-+ Commoners Simple Garb  
-+ Large Leather Shield  
-+ Travelers Gloves  
-+ Riveted Wooden Shield  
-+ Glintstone Scarab  
-+ Crucible Tree Set  
-+ Great Katana  
-+ Royal Knight Helm/Set  
-+ Ash of War Scarab  
-+ Meteorite Staff  
-+ Astrologer Set  
-+ Great Stars  
-+ Banished Knight Shield  
-+ Depraved Perfumer Robe  
-+ Iji’s Mirror Helm  
-+ Shining Horn Headband  
-+ Beast Crest Heater Shield  
-+ Mushroom Set  
-+ Blackflame Monk Set  
-+ Bloodhound Knight Set  
-+ Great Horned Headband  
-+ Travelling Maiden Set  
-+ Sun Realm Shield  
-+ Spiked Palisade Shield  
-+ Red Branch Shortbow  
-+ Eye Surcoat  
-+ Dirty Chainmail  
-+ Lusat Staff  
-+ Pike  
-+ Death Ritual Spear  
-+ Nightrider Glaive  
-+ Nightrider Flail  
-+ Velvet Sword of St Trina  
-+ Bloody Helice  
-+ Claws of Night  
-+ Iron Greatsword  
-+ Dancing Blade of Ranah  
-+ Messmer Soldier Spear  
-+ Zweihander  
-+ Ancient Meteoric Ore Great Sword  
-+ Rotten Crystal Staff  
-+ Chain Leggings  
-+ Finger Robe  
-+ Spirit Sword  
-+ Glintstone Staff  
-+ Prince of Death’s Staff  
-+ Spellblade’s Pointed Hat  
-+ Spellblade's Gloves  
-+ Beast Champion Set  
-+ Black Wolf Mask  
-+ Fire Knight Armour Altered  
-+ Blaidd Set  
-+ Warhawk’s Talon  
-+ Magma Wyrm Scalesword  
-+ Igon Set  
-+ Fingerprint Set  
-+ Leather Armour  
-+ Sword of Night and Flame  
-+ Fire Prelate Set  
-+ Blue Festive Hood  
-+ Mausoleum Surcoat  
-+ Ronin Set  
-+ Hoslow Petal Whip  
-+ Ruler’s Robe and Mask  
-+ Bandit Boots/Garb  
-+ Fire Monk Set  
-+ White Reed Set  
-+ Longsword  
-+ Winged Greathorn  
-+ Scarlet Tabard  
-+ Bloodhound Knight Set  
-+ Perfumer Robe  
-+ Marionette Soldier Armor  
-+ Braided Cord Set  
-+ Albinauric Bow  
-+ Briar Helm  
-+ Black Dumpling  
-+ Lazuli Glintstone Sword  
-+ Great Stars  
-+ Eclipse Crest Great/Heater Shield  
-+ Fallingstar Beast Jaw  
-+ Pickaxe  
-+ Carian Sorcery Sword  
-+ Gravebird Set  
-+ Troll Knight Sword  
-+ Lionel Set  
-+ Gravekeeper Cloak  
-+ Ringed Finger  
-+ Pata  
-+ Errant Sorcerer Robe Altered  
-+ Thiollier's Set  
-+ Raptor’s Black Feathers  
-+ Confessor Set  
-+ Eccentric Set  
-+ Inverted Hawk Heater Shield  
-+ Horned Warrior Sword  
-+ Greatbow  
-+ Lion Greatbow  
-+ Monk’s Flamemace  
-+ Skeletal Mask  
-+ Queens Bracelets  
-+ Twinned Set  
-+ Serpent Hunter  
-+ Dragon Hunter Great Katana  
-+ Octopus Head  
-+ Lordsword’s Shield  
-+ Bull Goat Set  
-+ Crimson Tear Scarab  
-+ Azur Glintstone Staff  
-+ Rotten Battle Hammer  
-+ Varre Bouquet  
-+ Consort Mask  
-+ Reduvia  
-+ All Glintstone Crowns  
-+ Raging Wolf Set  
-+ Royal Remains Set  
-+ Moonveil  
-+ Malenia Set  
+- Albinauric Bow
+- All Glintstone Crowns
+- All-Knowing Set
+- Ancient Meteoric Ore Great Sword
+- Aristocrat Hat
+- Ash Of War Scarab
+- Astrologer Robe
+- Azur Glintstone Staff
+- Bandit Boots
+- Banished Knight Set
+- Banished Knight Shield
+- Beast Champion Set
+- Beast Crest Heater Shield
+- Black Dumpling
+- Black Flame Monk Armor
+- Black Steel Greathammer
+- Black Wolf Mask
+- Black Knife Set
+- Blackflame Monk Set
+- Blaidd Armour
+- Bloody Helice
+- Blue Festive Hood
+- Braided Cord Set
+- Briar Helm
+- Bull Goat Set
+- Carian Knight Set
+- Carian Sorcery Sword
+- Chain Leggings
+- Cerulean Scarab
+- Claws Of Night
+- Commoners Simple Garb
+- Confessor Hood
+- Consort Mask
+- Consorts Mask
+- Crimson Tear Scarab
+- Crucible Tree Set
+- Dancing Blade Of Ranah
+- Dancer's Dress Altered
+- Death Knight Set
+- Death Ritual Spear
+- Deaths Poker
+- Depraved Perfumer Robe
+- Dirty Chainmail
+- Eclipse Great Crest Shield
+- Eccentric Set
+- Eleonora's Poleblade
+- Exile Armor
+- Exile Gauntlets
+- Eye Surcoat
+- Falling Star Beast Jaw
+- Finger Robe
+- Fingerprint Set
+- Fire Knight Armour Altered
+- Fire Monk Set
+- Fire Prelate Armor Altered
+- Fire Prelate Set
+- Gelmir Knight Set
+- Gargoyles Black Blade
+- Gaius's Armor
+- Glintstone Scarab
+- Glintstone Staff
+- Godrick Knight Greaves
+- Grave Bird Set
+- Gravekeeper Cloak
+- Great Bow
+- Great Horned Headband
+- Great Katana
+- Great Stars
+- Haligtree Knight Set
+- Horned Warrior Sword
+- Hoslow Petal Whip
+- Iji’s Mirror Helm
+- Igon Set
+- Inverted Hawk Heater Shield
+- Iron Greatsword
+- Knight Helm / Knight Set
+- Large Leather Shield
+- Lazuli Glintstone Sword
+- Leather Armour
+- Lionel Set
+- Lionel's Armor Altered
+- Lordsword’s Shield
+- Longsword
+- Lord Of Blood's Robe Altered
+- Lusat Staff
+- Magma Worm Scale Sword
+- Malenia Set
+- Marionette Soldier Armor
+- Maternal Staff
+- Mausoleum Surcoat
+- Messmer Soldier Spear
+- Meteoric Ore Blade
+- Meteorite Staff
+- Monk’s Flamemace
+- Moonveil
+- Mushroom Set
+- Night Rider Flail
+- Night Rider Glaive
+- Octopus Head
+- Omen Set
+- Pata
+- Perfumer Robe
+- Pickaxe
+- Pike
+- Prince Of Death’s Staff
+- Prisoner Iron Mask
+- Queen's Bracelets
+- Raging Wolf Armour
+- Raptor’s Black Feathers
+- Red Branch Shortbow
+- Reduvia
+- Ringed Finger
+- Ronin Set
+- Ronin's Set
+- Rotten Battle Hammer
+- Rotten Crystal Staff
+- Royal Knight Helm/Set
+- Royal Remains Set
+- Ruler’s Robe
+- Scarlet Tabard
+- Scaled Set
+- Serpent Crest Shield
+- Serpent Hunter
+- Shining Horn Headband
+- Skeletal Mask
+- Spellblade’s Pointed Hat
+- Spirit Sword
+- Spiked Palisade Shield
+- Sun Realm Shield
+- Sword Of Night And Flame
+- Thiollier Set
+- Travelling Maiden Robe
+- Traveler's Gloves
+- Troll Knight Sword
+- Twinned Armour
+- Uchigatana
+- Varre Bouquet
+- Velvet Sword Of St Trina
+- Verdigris Set
+- Veteran's Prosthesis
+- Warhawk’s Talon
+- White Reed Set
+- Whip
+- Winged Great Horn
+- Zweihander
+
 </details>
 
 Upcoming changes:
