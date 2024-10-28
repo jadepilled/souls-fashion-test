@@ -226,23 +226,44 @@
 
 
 <script>
+    // Variable to store the most recently loaded preset name
+    let currentOutfitName = "Current Outfit";
+
+    // Function to load a preset into the simulator
+    function loadPreset(presetNumber) {
+        const preset = JSON.parse(localStorage.getItem(`preset${presetNumber}`));
+        if (preset) {
+            localStorage.setItem('outfitSlots', JSON.stringify(preset));
+            loadOutfitFromStorage();
+
+            // Update the current outfit name with the loaded preset name
+            currentOutfitName = document.getElementById(`presetName${presetNumber}`).textContent.trim();
+        }
+    }
+
     async function downloadSimulatorImage() {
         // Create a container to hold the header, simulator div, and footer
         const container = document.createElement('div');
         container.style.backgroundColor = "#121212"; // Match the page background color
+        container.style.padding = "20px";
+        container.style.display = "flex";
+        container.style.flexDirection = "column";
+        container.style.alignItems = "center";
 
-        // Create the header with the preset name
+        // Create the header with the current outfit name
         const header = document.createElement('h3');
-        header.textContent = document.querySelector('.editable-preset-name').textContent.trim();
+        header.textContent = currentOutfitName; // Use the most recently loaded preset name
         header.style.color = "#ffffff";
         header.style.fontFamily = "'Spectral', Helvetica, Arial, sans-serif";
         header.style.textAlign = "center";
         container.appendChild(header);
 
-        // Clone the outfitSlotsSimulator and append to container
+        // Clone the outfitSlotsSimulator div and append to container
         const simulatorDiv = document.getElementById('outfitSlotsSimulator').cloneNode(true);
         simulatorDiv.style.margin = "20px auto";
-        simulatorDiv.style.display = "block";
+        simulatorDiv.style.display = "grid"; // Retain the grid layout
+        simulatorDiv.style.gridTemplateColumns = window.getComputedStyle(document.getElementById('outfitSlotsSimulator')).getPropertyValue('grid-template-columns');
+        simulatorDiv.style.gap = window.getComputedStyle(document.getElementById('outfitSlotsSimulator')).getPropertyValue('gap');
         container.appendChild(simulatorDiv);
 
         // Create footer text
@@ -264,7 +285,7 @@
             const canvas = await html2canvas(container, { backgroundColor: null });
             const link = document.createElement('a');
             link.href = canvas.toDataURL('image/png');
-            link.download = `${header.textContent}_Outfit.png`;
+            link.download = `${currentOutfitName}_Outfit.png`;
             link.click();
         } catch (error) {
             console.error('Error generating image:', error);
@@ -273,6 +294,47 @@
         // Clean up by removing the container
         document.body.removeChild(container);
     }
+
+    // Function to load outfit from localStorage and display it
+    function loadOutfitFromStorage() {
+        const outfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+        const outfitSlots = document.getElementById("outfitSlotsSimulator");
+        outfitSlots.innerHTML = ''; // Clear existing items
+
+        const layoutOrder = ["head", "weapons", "chest", "shields", "hands", "legs"];
+
+        layoutOrder.forEach(slotId => {
+            const item = outfit[`${slotId}Slot`];
+            const card = document.createElement("div");
+            card.classList.add("item-card");
+
+            if (item) {
+                const img = document.createElement("img");
+                img.src = `pages/eldenring/icons/${item.image}`;
+                img.alt = item.name;
+
+                const name = document.createElement("p");
+                name.textContent = item.name;
+
+                card.appendChild(img);
+                card.appendChild(name);
+            } else {
+                const placeholder = document.createElement("p");
+                placeholder.classList.add("placeholder-tile");
+                placeholder.textContent = `No ${slotId} item selected`;
+                card.appendChild(placeholder);
+            }
+
+            card.id = `${slotId}Card`;
+            outfitSlots.appendChild(card);
+        });
+    }
+
+    // Load preset names and outfit on page load
+    document.addEventListener("DOMContentLoaded", () => {
+        loadPresetNames();
+        loadOutfitFromStorage();
+    });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
