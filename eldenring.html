@@ -251,8 +251,11 @@
         });
 
         // Close the context menu when clicking outside
-        document.addEventListener('click', () => {
-            document.getElementById('contextMenu').style.display = 'none';
+        document.addEventListener('click', (event) => {
+            const contextMenu = document.getElementById('contextMenu');
+            if (contextMenu.style.display === 'block') {
+                contextMenu.style.display = 'none';
+            }
         });
     }
 
@@ -294,6 +297,7 @@
         loadOutfitFromStorage();
     });
 </script>
+
 
 
 </body>
