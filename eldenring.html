@@ -246,7 +246,7 @@
             // Add right-click (contextmenu) event listener to show the remove item context menu
             card.addEventListener('contextmenu', (event) => {
                 event.preventDefault();
-                showRemoveItemContextMenu(event, slotId);
+                showContextMenu(event, 'remove', slotId);
             });
 
             outfitContainer.appendChild(card);
@@ -261,18 +261,26 @@
         });
     }
 
-    // Function to show the custom context menu for removing an item
-    function showRemoveItemContextMenu(event, slotId) {
-        rightClickedSlotId = slotId; // Store the slotId for later use
-
+    // Function to show the custom context menu for either removing or sending items
+    function showContextMenu(event, action, identifier) {
         const contextMenu = document.getElementById('contextMenu');
-        contextMenu.innerHTML = '<ul><li id="removeItemOption">Remove Item</li></ul>';
+        contextMenu.innerHTML = ''; // Clear previous menu items
+
+        const menuOption = document.createElement('li');
+        if (action === 'remove') {
+            rightClickedSlotId = identifier; // Store the slotId for later use
+            menuOption.textContent = 'Remove Item';
+            menuOption.addEventListener('click', removeItemFromOutfit);
+        } else if (action === 'send') {
+            rightClickedItem = identifier; // Store the item for later use
+            menuOption.textContent = 'Send to Outfit Simulator';
+            menuOption.addEventListener('click', sendItemToOutfitSimulator);
+        }
+
+        contextMenu.appendChild(menuOption);
         contextMenu.style.top = `${event.pageY}px`;
         contextMenu.style.left = `${event.pageX}px`;
         contextMenu.style.display = 'block';
-
-        // Add event listener to the "Remove Item" option
-        document.getElementById('removeItemOption').addEventListener('click', removeItemFromOutfit);
     }
 
     // Function to remove an item from the current outfit
@@ -293,20 +301,6 @@
 
         // Hide the context menu after removing the item
         document.getElementById('contextMenu').style.display = 'none';
-    }
-
-    // Function to show the custom context menu for sending an item to the outfit simulator
-    function showSendToSimulatorContextMenu(event, item) {
-        rightClickedItem = item; // Store the item for later use
-
-        const contextMenu = document.getElementById('contextMenu');
-        contextMenu.innerHTML = '<ul><li id="sendToSimulatorOption">Send to Outfit Simulator</li></ul>';
-        contextMenu.style.top = `${event.pageY}px`;
-        contextMenu.style.left = `${event.pageX}px`;
-        contextMenu.style.display = 'block';
-
-        // Add event listener to the "Send to Outfit Simulator" option
-        document.getElementById('sendToSimulatorOption').addEventListener('click', sendItemToOutfitSimulator);
     }
 
     // Function to send an item to the outfit simulator
@@ -332,7 +326,7 @@
                 const item = items.find(i => i.name === itemName);
 
                 if (item) {
-                    showSendToSimulatorContextMenu(event, item);
+                    showContextMenu(event, 'send', item);
                 }
             });
         });
@@ -346,6 +340,7 @@
         });
     };
 </script>
+
 
 
 
