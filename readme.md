@@ -44,6 +44,7 @@ You may alter, adapt, or build upon the source material, as long as attribution 
 > [ver 1.0.3] - *search by type function added for all games. mobile device support improved. Improved color database for the following items:* 
 <details>
   <summary>Item List</summary>
+  
 - Albinauric Bow
 - All Glintstone Crowns
 - All-Knowing Set
