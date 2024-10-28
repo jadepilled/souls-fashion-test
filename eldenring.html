@@ -146,6 +146,12 @@
     <!-- Items will be dynamically loaded here -->
 </div>
 
+<div id="contextMenu" class="custom-context-menu" style="display: none;">
+    <ul>
+        <li id="removeItemOption">Remove Item</li>
+    </ul>
+</div>
+
 <script src="search_items_eldenring.js"></script>
 <script>
     const modeToggle = document.getElementById('modeToggle');
@@ -196,5 +202,99 @@
         }
     });
 </script>
+
+<script>
+    // Variable to track the slot ID of the right-clicked item
+    let rightClickedSlotId = null;
+
+    function loadOutfitFromStorage() {
+        const types = ["head", "chest", "hands", "legs", "weapons", "shields"];
+        const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+
+        const outfitContainer = document.getElementById("outfitSlots");
+        outfitContainer.innerHTML = ''; // Clear existing items
+
+        types.forEach(type => {
+            const slotId = `${type}Slot`;
+            const item = outfitSlots[slotId];
+
+            const card = document.createElement("div");
+            card.classList.add("item-card");
+            card.dataset.slotId = slotId;
+
+            if (item) {
+                // Display the selected item
+                const img = document.createElement("img");
+                img.src = `pages/eldenring/icons/${item.image}`;
+                img.alt = item.name;
+
+                const name = document.createElement("p");
+                name.textContent = item.name;
+
+                card.appendChild(img);
+                card.appendChild(name);
+            } else {
+                // Display placeholder
+                const placeholder = document.createElement("p");
+                placeholder.classList.add("placeholder-tile");
+                placeholder.textContent = `No ${type} item selected`;
+                card.appendChild(placeholder);
+            }
+
+            // Add right-click (contextmenu) event listener to show the custom context menu
+            card.addEventListener('contextmenu', (event) => {
+                event.preventDefault();
+                showContextMenu(event, slotId);
+            });
+
+            outfitContainer.appendChild(card);
+        });
+
+        // Close the context menu when clicking outside
+        document.addEventListener('click', () => {
+            document.getElementById('contextMenu').style.display = 'none';
+        });
+    }
+
+    // Function to show the custom context menu
+    function showContextMenu(event, slotId) {
+        rightClickedSlotId = slotId; // Store the slotId for later use
+
+        const contextMenu = document.getElementById('contextMenu');
+        contextMenu.style.top = `${event.pageY}px`;
+        contextMenu.style.left = `${event.pageX}px`;
+        contextMenu.style.display = 'block';
+    }
+
+    // Function to remove an item from the current outfit
+    function removeItemFromOutfit() {
+        if (rightClickedSlotId) {
+            // Fetch the current outfit from localStorage
+            const outfit = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+
+            // Remove the item from the current outfit
+            delete outfit[rightClickedSlotId];
+
+            // Update the outfit in localStorage
+            localStorage.setItem('outfitSlots', JSON.stringify(outfit));
+
+            // Reload the outfitSlots to reflect the removal
+            loadOutfitFromStorage();
+        }
+
+        // Hide the context menu after removing the item
+        document.getElementById('contextMenu').style.display = 'none';
+    }
+
+    // Attach an event listener to the "Remove Item" option in the context menu
+    document.getElementById('removeItemOption').addEventListener('click', removeItemFromOutfit);
+
+    // Load outfit from localStorage and display it on page load
+    document.addEventListener("DOMContentLoaded", () => {
+        loadOutfitFromStorage();
+    });
+</script>
+
+
 </body>
 </html>
