@@ -14,7 +14,7 @@ function shuffle(array) {
 // Fetch the typed_items_for_web.json file and store its data
 async function fetchItems() {
   try {
-      const response = await fetch('pages/ds3/typed_items_for_web.json');
+      const response = await fetch('pages/bloodborne/typed_items_for_web.json');
       if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -117,7 +117,7 @@ function createItemCard(item) {
   card.classList.add('item-card');
 
   const img = document.createElement('img');
-  img.src = `pages/ds3/icons/${item.image}`;
+  img.src = `pages/bloodborne/icons/${item.image}`;
   img.alt = item.name;
 
   const title = document.createElement('p');
