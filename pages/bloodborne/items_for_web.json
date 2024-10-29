@@ -1,0 +1,1982 @@
+[
+    {
+        "name": "Ashen Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Ashen Hunter Garb.png",
+        "primaryColor": "#9c9996",
+        "secondaryColors": [
+            "#827b77",
+            "#635f5b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Ashen+Hunter+Garb"
+    },
+    {
+        "name": "Beast Hide Garb",
+        "type": "chest",
+        "image": "Chest/Beast Hide Garb.png",
+        "primaryColor": "#9b9390",
+        "secondaryColors": [
+            "#8d706d",
+            "#5f5c57"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Beast+Hide+Garb"
+    },
+    {
+        "name": "Black Church Garb (Female)",
+        "type": "chest",
+        "image": "Chest/Black Church Garb (Female).png",
+        "primaryColor": "#dbd9d3",
+        "secondaryColors": [
+            "#a5a39b",
+            "#51504d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Black+Church+Garb"
+    },
+    {
+        "name": "Black Church Garb",
+        "type": "chest",
+        "image": "Chest/Black Church Garb.png",
+        "primaryColor": "#aaa696",
+        "secondaryColors": [
+            "#514f4b",
+            "#44423c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Black+Church+Garb"
+    },
+    {
+        "name": "Bone Ash Armor",
+        "type": "chest",
+        "image": "Chest/Bone Ash Armor.png",
+        "primaryColor": "#9b9592",
+        "secondaryColors": [
+            "#8c7261",
+            "#5d5652"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Bone+Ash+Armor"
+    },
+    {
+        "name": "Butcher Garb",
+        "type": "chest",
+        "image": "Chest/Butcher Garb.png",
+        "primaryColor": "#8d6f5c",
+        "secondaryColors": [
+            "#68584b",
+            "#544639"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Butcher+Garb"
+    },
+    {
+        "name": "Cainhurst Armor",
+        "type": "chest",
+        "image": "Chest/Cainhurst Armor.png",
+        "primaryColor": "#9e9b99",
+        "secondaryColors": [
+            "#5b5652",
+            "#903433"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Cainhurst+Armor"
+    },
+    {
+        "name": "Charred Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Charred Hunter Garb.png",
+        "primaryColor": "#906d5a",
+        "secondaryColors": [
+            "#67564b",
+            "#5a4639"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Charred+Hunter+Garb"
+    },
+    {
+        "name": "Choir Garb",
+        "type": "chest",
+        "image": "Chest/Choir Garb.png",
+        "primaryColor": "#d1d0cd",
+        "secondaryColors": [
+            "#c3c1bd",
+            "#a6a5a1"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Choir+Garb"
+    },
+    {
+        "name": "Constable'S Garb",
+        "type": "chest",
+        "image": "Chest/Constable's Garb.png",
+        "primaryColor": "#94856d",
+        "secondaryColors": [
+            "#87765f",
+            "#555355"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Constable%27S+Garb"
+    },
+    {
+        "name": "Crowfeather Garb",
+        "type": "chest",
+        "image": "Chest/Crowfeather Garb.png",
+        "primaryColor": "#928b93",
+        "secondaryColors": [
+            "#5d5558",
+            "#50453b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Crowfeather+Garb"
+    },
+    {
+        "name": "Decorative Old Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Decorative Old Hunter Garb.png",
+        "primaryColor": "#9c9a95",
+        "secondaryColors": [
+            "#5d5a4f",
+            "#48463a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Decorative+Old+Hunter+Garb"
+    },
+    {
+        "name": "Doll Clothes",
+        "type": "chest",
+        "image": "Chest/Doll Clothes.png",
+        "primaryColor": "#9a6d65",
+        "secondaryColors": [
+            "#65574c",
+            "#524539"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Doll+Clothes"
+    },
+    {
+        "name": "Executioner Garb",
+        "type": "chest",
+        "image": "Chest/Executioner Garb.png",
+        "primaryColor": "#999795",
+        "secondaryColors": [
+            "#85827c",
+            "#827c77"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Executioner+Garb"
+    },
+    {
+        "name": "Foreign Garb (Female)",
+        "type": "chest",
+        "image": "Chest/Foreign Garb (Female).png",
+        "primaryColor": "#e3e1d9",
+        "secondaryColors": [
+            "#a4a19c",
+            "#61534a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Foreign+Garb"
+    },
+    {
+        "name": "Foreign Garb",
+        "type": "chest",
+        "image": "Chest/Foreign Garb.png",
+        "primaryColor": "#e3e1da",
+        "secondaryColors": [
+            "#a5a39d",
+            "#61574d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Foreign+Garb"
+    },
+    {
+        "name": "Gascoigne'S Garb",
+        "type": "chest",
+        "image": "Chest/Gascoigne's Garb.png",
+        "primaryColor": "#c7b599",
+        "secondaryColors": [
+            "#51504f",
+            "#4a433a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gascoigne%27S+Garb"
+    },
+    {
+        "name": "Gehrman'S Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Gehrman's Hunter Garb.png",
+        "primaryColor": "#aca08f",
+        "secondaryColors": [
+            "#5b504d",
+            "#4d433b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gehrman%27S+Hunter+Garb"
+    },
+    {
+        "name": "Graveguard Robe",
+        "type": "chest",
+        "image": "Chest/Graveguard Robe.png",
+        "primaryColor": "#cca58c",
+        "secondaryColors": [
+            "#ad8c71",
+            "#956b58"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Graveguard+Robe"
+    },
+    {
+        "name": "Harrowed Garb",
+        "type": "chest",
+        "image": "Chest/Harrowed Garb.png",
+        "primaryColor": "#a0968c",
+        "secondaryColors": [
+            "#9a8875",
+            "#897565"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Harrowed+Garb"
+    },
+    {
+        "name": "Henryk'S Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Henryk's Hunter Garb.png",
+        "primaryColor": "#a68d68",
+        "secondaryColors": [
+            "#8b7353",
+            "#6d5c48"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Henryk%27S+Hunter+Garb"
+    },
+    {
+        "name": "Hunter Garb (Female)",
+        "type": "chest",
+        "image": "Chest/Hunter Garb (Female).png",
+        "primaryColor": "#a3a19d",
+        "secondaryColors": [
+            "#65615a",
+            "#4a443a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter+Garb"
+    },
+    {
+        "name": "Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Hunter Garb.png",
+        "primaryColor": "#a09f9f",
+        "secondaryColors": [
+            "#5e5b55",
+            "#48433b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter+Garb"
+    },
+    {
+        "name": "Khaki Haori",
+        "type": "chest",
+        "image": "Chest/Khaki Haori.png",
+        "primaryColor": "#9d8d67",
+        "secondaryColors": [
+            "#887555",
+            "#6c604b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Khaki+Haori"
+    },
+    {
+        "name": "Knight'S Garb (Female)",
+        "type": "chest",
+        "image": "Chest/Knight's Garb (Female).png",
+        "primaryColor": "#dfdbd6",
+        "secondaryColors": [
+            "#a8a49e",
+            "#6b6052"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Knight%27S+Garb"
+    },
+    {
+        "name": "Knight'S Garb",
+        "type": "chest",
+        "image": "Chest/Knight's Garb.png",
+        "primaryColor": "#a59b8f",
+        "secondaryColors": [
+            "#958977",
+            "#675b52"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Knight%27S+Garb"
+    },
+    {
+        "name": "Madman Garb",
+        "type": "chest",
+        "image": "Chest/Madman Garb.png",
+        "primaryColor": "#9fa59d",
+        "secondaryColors": [
+            "#5b5952",
+            "#4b433a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Madman+Garb"
+    },
+    {
+        "name": "Maria Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Maria Hunter Garb.png",
+        "primaryColor": "#dbd9db",
+        "secondaryColors": [
+            "#a19e9b",
+            "#8e8576"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Maria+Hunter+Garb"
+    },
+    {
+        "name": "Noble Dress",
+        "type": "chest",
+        "image": "Chest/Noble Dress.png",
+        "primaryColor": "#935e34",
+        "secondaryColors": [
+            "#6d492a",
+            "#4a2a1f"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Noble+Dress"
+    },
+    {
+        "name": "Old Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Old Hunter Garb.png",
+        "primaryColor": "#92908e",
+        "secondaryColors": [
+            "#5f5b56",
+            "#4b443b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Old+Hunter+Garb"
+    },
+    {
+        "name": "Student Uniform Variant",
+        "type": "chest",
+        "image": "Chest/Student Uniform Variant.png",
+        "primaryColor": "#dccdb2",
+        "secondaryColors": [
+            "#c6b89f",
+            "#afa28c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Student+Uniform+Variant"
+    },
+    {
+        "name": "Student Uniform",
+        "type": "chest",
+        "image": "Chest/Student Uniform.png",
+        "primaryColor": "#876e5e",
+        "secondaryColors": [
+            "#68564c",
+            "#50443b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Student+Uniform"
+    },
+    {
+        "name": "Sweaty Clothes",
+        "type": "chest",
+        "image": "Chest/Sweaty Clothes.png",
+        "primaryColor": "#b2a38c",
+        "secondaryColors": [
+            "#9f8d72",
+            "#88745a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Sweaty+Clothes"
+    },
+    {
+        "name": "Tomb Prospector Garb",
+        "type": "chest",
+        "image": "Chest/Tomb Prospector Garb.png",
+        "primaryColor": "#9c9c89",
+        "secondaryColors": [
+            "#8b8a76",
+            "#656153"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Tomb+Prospector+Garb"
+    },
+    {
+        "name": "White Church Garb (Female)",
+        "type": "chest",
+        "image": "Chest/White Church Garb (Female).png",
+        "primaryColor": "#cac8c6",
+        "secondaryColors": [
+            "#c2bbb1",
+            "#a4a19d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/White+Church+Garb"
+    },
+    {
+        "name": "White Church Garb",
+        "type": "chest",
+        "image": "Chest/White Church Garb.png",
+        "primaryColor": "#d1d2d1",
+        "secondaryColors": [
+            "#9f9f9e",
+            "#605f5e"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/White+Church+Garb"
+    },
+    {
+        "name": "Yahar'Gul Black Garb",
+        "type": "chest",
+        "image": "Chest/Yahar'Gul Black Garb.png",
+        "primaryColor": "#9f988f",
+        "secondaryColors": [
+            "#928774",
+            "#867968"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yahar%27Gul+Black+Garb"
+    },
+    {
+        "name": "Yharnam Hunter Garb (Female)",
+        "type": "chest",
+        "image": "Chest/Yharnam Hunter Garb (Female).png",
+        "primaryColor": "#a69d91",
+        "secondaryColors": [
+            "#5d564e",
+            "#4d4539"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yharnam+Hunter+Garb"
+    },
+    {
+        "name": "Yharnam Hunter Garb",
+        "type": "chest",
+        "image": "Chest/Yharnam Hunter Garb.png",
+        "primaryColor": "#886e55",
+        "secondaryColors": [
+            "#62584d",
+            "#544638"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yharnam+Hunter+Garb"
+    },
+    {
+        "name": "Ashen Hunter Gloves",
+        "type": "hands",
+        "image": "Hands/Ashen Hunter Gloves.png",
+        "primaryColor": "#908f8e",
+        "secondaryColors": [
+            "#535151",
+            "#413d3c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Ashen+Hunter+Gloves"
+    },
+    {
+        "name": "Bloodied Arm Bands",
+        "type": "hands",
+        "image": "Hands/Bloodied Arm Bands.png",
+        "primaryColor": "#9a9799",
+        "secondaryColors": [
+            "#877272",
+            "#60585a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Bloodied+Arm+Bands"
+    },
+    {
+        "name": "Bone Ash Gauntlets",
+        "type": "hands",
+        "image": "Hands/Bone Ash Gauntlets.png",
+        "primaryColor": "#d5d5d3",
+        "secondaryColors": [
+            "#9c9c9b",
+            "#5a5a59"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Bone+Ash+Gauntlets"
+    },
+    {
+        "name": "Butcher Gloves",
+        "type": "hands",
+        "image": "Hands/Butcher Gloves.png",
+        "primaryColor": "#897562",
+        "secondaryColors": [
+            "#5f564b",
+            "#50453a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Butcher+Gloves"
+    },
+    {
+        "name": "Cainhurst Gauntlets",
+        "type": "hands",
+        "image": "Hands/Cainhurst Gauntlets.png",
+        "primaryColor": "#9b9a93",
+        "secondaryColors": [
+            "#5c5851",
+            "#49433c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Cainhurst+Gauntlets"
+    },
+    {
+        "name": "Charred Hunter Gloves",
+        "type": "hands",
+        "image": "Hands/Charred Hunter Gloves.png",
+        "primaryColor": "#989893",
+        "secondaryColors": [
+            "#5d5a53",
+            "#4c4538"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Charred+Hunter+Gloves"
+    },
+    {
+        "name": "Choir Gloves",
+        "type": "hands",
+        "image": "Hands/Choir Gloves.png",
+        "primaryColor": "#5f5f5f",
+        "secondaryColors": [
+            "#54524c",
+            "#43413d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Choir+Gloves"
+    },
+    {
+        "name": "Constable'S Gloves",
+        "type": "hands",
+        "image": "Hands/Constable's Gloves.png",
+        "primaryColor": "#d1cec7",
+        "secondaryColors": [
+            "#c8c3ba",
+            "#c3bab0"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Constable%27S+Gloves"
+    },
+    {
+        "name": "Crowfeather Manchettes",
+        "type": "hands",
+        "image": "Hands/Crowfeather Manchettes.png",
+        "primaryColor": "#857769",
+        "secondaryColors": [
+            "#675a52",
+            "#52463a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Crowfeather+Manchettes"
+    },
+    {
+        "name": "Doll Gloves",
+        "type": "hands",
+        "image": "Hands/Doll Gloves.png",
+        "primaryColor": "#cca197",
+        "secondaryColors": [
+            "#b2908a",
+            "#95665d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Doll+Gloves"
+    },
+    {
+        "name": "Executioner Gauntlets",
+        "type": "hands",
+        "image": "Hands/Executioner Gauntlets.png",
+        "primaryColor": "#887562",
+        "secondaryColors": [
+            "#675a4d",
+            "#514539"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Executioner+Gauntlets"
+    },
+    {
+        "name": "Gascoigne'S Gloves",
+        "type": "hands",
+        "image": "Hands/Gascoigne's Gloves.png",
+        "primaryColor": "#9e9690",
+        "secondaryColors": [
+            "#8d837c",
+            "#847973"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gascoigne%27S+Gloves"
+    },
+    {
+        "name": "Graveguard Manchettes",
+        "type": "hands",
+        "image": "Hands/Graveguard Manchettes.png",
+        "primaryColor": "#a68770",
+        "secondaryColors": [
+            "#946855",
+            "#6e574a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Graveguard+Manchettes"
+    },
+    {
+        "name": "Harrowed Gloves",
+        "type": "hands",
+        "image": "Hands/Harrowed Gloves.png",
+        "primaryColor": "#a8a191",
+        "secondaryColors": [
+            "#978770",
+            "#8b755d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Harrowed+Gloves"
+    },
+    {
+        "name": "Henryk'S Hunter Gloves",
+        "type": "hands",
+        "image": "Hands/Henryk's Hunter Gloves.png",
+        "primaryColor": "#8c7056",
+        "secondaryColors": [
+            "#5c544a",
+            "#4c443b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Henryk%27S+Hunter+Gloves"
+    },
+    {
+        "name": "Hunter Gloves",
+        "type": "hands",
+        "image": "Hands/Hunter Gloves.png",
+        "primaryColor": "#9d926a",
+        "secondaryColors": [
+            "#5a544b",
+            "#4d4639"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter+Gloves"
+    },
+    {
+        "name": "Knight'S Gloves (Female)",
+        "type": "hands",
+        "image": "Hands/Knight's Gloves (Female).png",
+        "primaryColor": "#988b6e",
+        "secondaryColors": [
+            "#96534e",
+            "#745f4b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Knight%27S+Gloves"
+    },
+    {
+        "name": "Knight'S Gloves",
+        "type": "hands",
+        "image": "Hands/Knight's Gloves.png",
+        "primaryColor": "#846b5e",
+        "secondaryColors": [
+            "#64564c",
+            "#50433b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Knight%27S+Gloves"
+    },
+    {
+        "name": "Madman Manchettes",
+        "type": "hands",
+        "image": "Hands/Madman Manchettes.png",
+        "primaryColor": "#aea38b",
+        "secondaryColors": [
+            "#998b70",
+            "#87765e"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Madman+Manchettes"
+    },
+    {
+        "name": "Maria Hunter Gloves",
+        "type": "hands",
+        "image": "Hands/Maria Hunter Gloves.png",
+        "primaryColor": "#9f968d",
+        "secondaryColors": [
+            "#908477",
+            "#85776a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Maria+Hunter+Gloves"
+    },
+    {
+        "name": "Old Hunter Arm Bands",
+        "type": "hands",
+        "image": "Hands/Old Hunter Arm Bands.png",
+        "primaryColor": "#9d9894",
+        "secondaryColors": [
+            "#837a75",
+            "#625954"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Old+Hunter+Arm+Bands"
+    },
+    {
+        "name": "Old Hunter Gloves",
+        "type": "hands",
+        "image": "Hands/Old Hunter Gloves.png",
+        "primaryColor": "#9d958c",
+        "secondaryColors": [
+            "#8c8774",
+            "#85766c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Old+Hunter+Gloves"
+    },
+    {
+        "name": "Sullied Bandage",
+        "type": "hands",
+        "image": "Hands/Sullied Bandage.png",
+        "primaryColor": "#a49a90",
+        "secondaryColors": [
+            "#928579",
+            "#88776d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Sullied+Bandage"
+    },
+    {
+        "name": "Surgical Long Gloves",
+        "type": "hands",
+        "image": "Hands/Surgical Long Gloves.png",
+        "primaryColor": "#d2d0c8",
+        "secondaryColors": [
+            "#c8c4b9",
+            "#c1bcb0"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Surgical+Long+Gloves"
+    },
+    {
+        "name": "Tomb Prospector Gloves",
+        "type": "hands",
+        "image": "Hands/Tomb Prospector Gloves.png",
+        "primaryColor": "#82796c",
+        "secondaryColors": [
+            "#60564e",
+            "#4d423b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Tomb+Prospector+Gloves"
+    },
+    {
+        "name": "Yahar'Gul Black Gloves",
+        "type": "hands",
+        "image": "Hands/Yahar'Gul Black Gloves.png",
+        "primaryColor": "#867767",
+        "secondaryColors": [
+            "#61574c",
+            "#4e443a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yahar%27Gul+Black+Gloves"
+    },
+    {
+        "name": "Yharnam Hunter Gloves",
+        "type": "hands",
+        "image": "Hands/Yharnam Hunter Gloves.png",
+        "primaryColor": "#635847",
+        "secondaryColors": [
+            "#5f4a34",
+            "#524637"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yharnam+Hunter+Gloves"
+    },
+    {
+        "name": "Beak Mask",
+        "type": "head",
+        "image": "Head/Beak Mask.png",
+        "primaryColor": "#cab29b",
+        "secondaryColors": [
+            "#b19f90",
+            "#a08975"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Beak+Mask"
+    },
+    {
+        "name": "Black Church Hat (Female)",
+        "type": "head",
+        "image": "Head/Black Church Hat (Female).png",
+        "primaryColor": "#4f4e4b",
+        "secondaryColors": [
+            "#42413d",
+            "#3e403d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Black+Church+Hat"
+    },
+    {
+        "name": "Black Church Hat",
+        "type": "head",
+        "image": "Head/Black Church Hat.png",
+        "primaryColor": "#4d4b4a",
+        "secondaryColors": [
+            "#44413d",
+            "#413e3b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Black+Church+Hat"
+    },
+    {
+        "name": "Black Hood",
+        "type": "head",
+        "image": "Head/Black Hood.png",
+        "primaryColor": "#9c948a",
+        "secondaryColors": [
+            "#4e4946",
+            "#45413d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Black+Hood"
+    },
+    {
+        "name": "Black Hooded Iron Helm",
+        "type": "head",
+        "image": "Head/Black Hooded Iron Helm.png",
+        "primaryColor": "#a38b66",
+        "secondaryColors": [
+            "#5e564e",
+            "#514639"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Black+Hooded+Iron+Helm"
+    },
+    {
+        "name": "Blindfold Cap",
+        "type": "head",
+        "image": "Head/Blindfold Cap.png",
+        "primaryColor": "#9f9a94",
+        "secondaryColors": [
+            "#8b837a",
+            "#857670"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Blindfold+Cap"
+    },
+    {
+        "name": "Bone Ash Mask",
+        "type": "head",
+        "image": "Head/Bone Ash Mask.png",
+        "primaryColor": "#a4978d",
+        "secondaryColors": [
+            "#87766d",
+            "#5e5653"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Bone+Ash+Mask"
+    },
+    {
+        "name": "Brador'S Testimony",
+        "type": "head",
+        "image": "Head/Brador's Testimony.png",
+        "primaryColor": "#938f8c",
+        "secondaryColors": [
+            "#61605b",
+            "#5c5a55"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Brador%27S+Testimony"
+    },
+    {
+        "name": "Butcher Mask",
+        "type": "head",
+        "image": "Head/Butcher Mask.png",
+        "primaryColor": "#928872",
+        "secondaryColors": [
+            "#887761",
+            "#645d50"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Butcher+Mask"
+    },
+    {
+        "name": "Cainhurst Helmet",
+        "type": "head",
+        "image": "Head/Cainhurst Helmet.png",
+        "primaryColor": "#999794",
+        "secondaryColors": [
+            "#5c5956",
+            "#46423c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Cainhurst+Helmet"
+    },
+    {
+        "name": "Crown Of Illusions",
+        "type": "head",
+        "image": "Head/Crown of Illusions.png",
+        "primaryColor": "#8b744c",
+        "secondaryColors": [
+            "#706347",
+            "#614f31"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Crown+Of+Illusions"
+    },
+    {
+        "name": "Doll Hat",
+        "type": "head",
+        "image": "Head/Doll Hat.png",
+        "primaryColor": "#886553",
+        "secondaryColors": [
+            "#675149",
+            "#594639"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Doll+Hat"
+    },
+    {
+        "name": "Enlarged Head",
+        "type": "head",
+        "image": "Head/Enlarged Head.png",
+        "primaryColor": "#dacfd1",
+        "secondaryColors": [
+            "#cbadaf",
+            "#aa9597"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Enlarged+Head"
+    },
+    {
+        "name": "Gascoigne'S Cap",
+        "type": "head",
+        "image": "Head/Gascoigne's Cap.png",
+        "primaryColor": "#c0c0c0",
+        "secondaryColors": [
+            "#a2a2a2",
+            "#5a5a5c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gascoigne%27S+Cap"
+    },
+    {
+        "name": "Gehrman'S Hunter Cap",
+        "type": "head",
+        "image": "Head/Gehrman's Hunter Cap.png",
+        "primaryColor": "#969596",
+        "secondaryColors": [
+            "#524e4e",
+            "#46423c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gehrman%27S+Hunter+Cap"
+    },
+    {
+        "name": "Gold Ardeo",
+        "type": "head",
+        "image": "Head/Gold Ardeo.png",
+        "primaryColor": "#9e9065",
+        "secondaryColors": [
+            "#88724e",
+            "#6f6249"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gold+Ardeo"
+    },
+    {
+        "name": "Graveguard Mask",
+        "type": "head",
+        "image": "Head/Graveguard Mask.png",
+        "primaryColor": "#92624e",
+        "secondaryColors": [
+            "#675b54",
+            "#864f3a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Graveguard+Mask"
+    },
+    {
+        "name": "Gray Wolf Cap",
+        "type": "head",
+        "image": "Head/Gray Wolf Cap.png",
+        "primaryColor": "#a29e96",
+        "secondaryColors": [
+            "#88837a",
+            "#605c57"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gray+Wolf+Cap"
+    },
+    {
+        "name": "Harrowed Hood",
+        "type": "head",
+        "image": "Head/Harrowed Hood.png",
+        "primaryColor": "#cac5b8",
+        "secondaryColors": [
+            "#a59f94",
+            "#8d8678"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Harrowed+Hood"
+    },
+    {
+        "name": "Henryk'S Hunter Cap",
+        "type": "head",
+        "image": "Head/Henryk's Hunter Cap.png",
+        "primaryColor": "#a9886a",
+        "secondaryColors": [
+            "#917057",
+            "#895f39"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Henryk%27S+Hunter+Cap"
+    },
+    {
+        "name": "Hunter Hat",
+        "type": "head",
+        "image": "Head/Hunter Hat.png",
+        "primaryColor": "#887565",
+        "secondaryColors": [
+            "#585553",
+            "#4b433c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter+Hat"
+    },
+    {
+        "name": "Iron Yahar'Gul Helm",
+        "type": "head",
+        "image": "Head/Iron Yahar'Gul Helm.png",
+        "primaryColor": "#958a6f",
+        "secondaryColors": [
+            "#87765e",
+            "#645e50"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Iron+Yahar%27Gul+Helm"
+    },
+    {
+        "name": "Knight'S Wig (Female)",
+        "type": "head",
+        "image": "Head/Knight's Wig (Female).png",
+        "primaryColor": "#8f9394",
+        "secondaryColors": [
+            "#5d5e5d",
+            "#5b5959"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Knight%27S+Wig"
+    },
+    {
+        "name": "Knight'S Wig",
+        "type": "head",
+        "image": "Head/Knight's Wig.png",
+        "primaryColor": "#e5e2d9",
+        "secondaryColors": [
+            "#d1c9b5",
+            "#a5a39d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Knight%27S+Wig"
+    },
+    {
+        "name": "Madman Hood",
+        "type": "head",
+        "image": "Head/Madman Hood.png",
+        "primaryColor": "#857561",
+        "secondaryColors": [
+            "#60554b",
+            "#4e443b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Madman+Hood"
+    },
+    {
+        "name": "Maria Hunter Cap",
+        "type": "head",
+        "image": "Head/Maria Hunter Cap.png",
+        "primaryColor": "#9a9692",
+        "secondaryColors": [
+            "#928972",
+            "#5a5653"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Maria+Hunter+Cap"
+    },
+    {
+        "name": "Master'S Iron Helm",
+        "type": "head",
+        "image": "Head/Master's Iron Helm.png",
+        "primaryColor": "#979491",
+        "secondaryColors": [
+            "#827c78",
+            "#5d5b59"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Master%27S+Iron+Helm"
+    },
+    {
+        "name": "Mensis Cage",
+        "type": "head",
+        "image": "Head/Mensis Cage.png",
+        "primaryColor": "#867169",
+        "secondaryColors": [
+            "#625752",
+            "#52433a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Mensis+Cage"
+    },
+    {
+        "name": "Old Hunter Cap",
+        "type": "head",
+        "image": "Head/Old Hunter Cap.png",
+        "primaryColor": "#847865",
+        "secondaryColors": [
+            "#5b5652",
+            "#554935"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Old+Hunter+Cap"
+    },
+    {
+        "name": "Old Hunter Top Hat",
+        "type": "head",
+        "image": "Head/Old Hunter Top Hat.png",
+        "primaryColor": "#d4d4d4",
+        "secondaryColors": [
+            "#a29f9d",
+            "#5f5855"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Old+Hunter+Top+Hat"
+    },
+    {
+        "name": "Rumpled Yharnam Hat",
+        "type": "head",
+        "image": "Head/Rumpled Yharnam Hat.png",
+        "primaryColor": "#877161",
+        "secondaryColors": [
+            "#64584e",
+            "#554539"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Rumpled+Yharnam+Hat"
+    },
+    {
+        "name": "Tomb Prospector Hood",
+        "type": "head",
+        "image": "Head/Tomb Prospector Hood.png",
+        "primaryColor": "#877368",
+        "secondaryColors": [
+            "#59504d",
+            "#49413d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Tomb+Prospector+Hood"
+    },
+    {
+        "name": "Top Hat",
+        "type": "head",
+        "image": "Head/Top Hat.png",
+        "primaryColor": "#9f9991",
+        "secondaryColors": [
+            "#5a5754",
+            "#44423d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Top+Hat"
+    },
+    {
+        "name": "White Church Hat (Female)",
+        "type": "head",
+        "image": "Head/White Church Hat (Female).png",
+        "primaryColor": "#c9c9c9",
+        "secondaryColors": [
+            "#a7a8a8",
+            "#656566"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/White+Church+Hat"
+    },
+    {
+        "name": "White Church Hat",
+        "type": "head",
+        "image": "Head/White Church Hat.png",
+        "primaryColor": "#9c9c9b",
+        "secondaryColors": [
+            "#82817e",
+            "#616261"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/White+Church+Hat"
+    },
+    {
+        "name": "Yamamura Hunter Hat",
+        "type": "head",
+        "image": "Head/Yamamura Hunter Hat.png",
+        "primaryColor": "#837867",
+        "secondaryColors": [
+            "#63584d",
+            "#524639"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yamamura+Hunter+Hat"
+    },
+    {
+        "name": "Yharnam Hunter Cap (Female)",
+        "type": "head",
+        "image": "Head/Yharnam Hunter Cap (Female).png",
+        "primaryColor": "#958775",
+        "secondaryColors": [
+            "#85786b",
+            "#625952"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yharnam+Hunter+Cap"
+    },
+    {
+        "name": "Yharnam Hunter Cap",
+        "type": "head",
+        "image": "Head/Yharnam Hunter Cap.png",
+        "primaryColor": "#8a7667",
+        "secondaryColors": [
+            "#5a5250",
+            "#4b423b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yharnam+Hunter+Cap"
+    },
+    {
+        "name": "Arianna'S Shoes",
+        "type": "legs",
+        "image": "Legs/Arianna's Shoes.png",
+        "primaryColor": "#cab493",
+        "secondaryColors": [
+            "#c5aa75",
+            "#b09f8c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Arianna%27S+Shoes"
+    },
+    {
+        "name": "Ashen Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Ashen Hunter Trousers.png",
+        "primaryColor": "#8f8c8a",
+        "secondaryColors": [
+            "#585552",
+            "#47423d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Ashen+Hunter+Trousers"
+    },
+    {
+        "name": "Black Church Dress",
+        "type": "legs",
+        "image": "Legs/Black Church Dress.png",
+        "primaryColor": "#dfddd6",
+        "secondaryColors": [
+            "#4f4d4a",
+            "#45413d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Black+Church+Dress"
+    },
+    {
+        "name": "Black Church Trousers",
+        "type": "legs",
+        "image": "Legs/Black Church Trousers.png",
+        "primaryColor": "#857469",
+        "secondaryColors": [
+            "#645850",
+            "#4f443b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Black+Church+Trousers"
+    },
+    {
+        "name": "Bloodied Trousers",
+        "type": "legs",
+        "image": "Legs/Bloodied Trousers.png",
+        "primaryColor": "#847a71",
+        "secondaryColors": [
+            "#605953",
+            "#49423d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Bloodied+Trousers"
+    },
+    {
+        "name": "Bone Ash Leggings",
+        "type": "legs",
+        "image": "Legs/Bone Ash Leggings.png",
+        "primaryColor": "#9f9995",
+        "secondaryColors": [
+            "#5f5954",
+            "#4f443a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Bone+Ash+Leggings"
+    },
+    {
+        "name": "Butcher Trousers",
+        "type": "legs",
+        "image": "Legs/Butcher Trousers.png",
+        "primaryColor": "#8d8576",
+        "secondaryColors": [
+            "#5c5750",
+            "#4c443a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Butcher+Trousers"
+    },
+    {
+        "name": "Cainhurst Leggings",
+        "type": "legs",
+        "image": "Legs/Cainhurst Leggings.png",
+        "primaryColor": "#9b9c9c",
+        "secondaryColors": [
+            "#595958",
+            "#43413d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Cainhurst+Leggings"
+    },
+    {
+        "name": "Charred Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Charred Hunter Trousers.png",
+        "primaryColor": "#887563",
+        "secondaryColors": [
+            "#5c544c",
+            "#4d443a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Charred+Hunter+Trousers"
+    },
+    {
+        "name": "Choir Trousers",
+        "type": "legs",
+        "image": "Legs/Choir Trousers.png",
+        "primaryColor": "#565353",
+        "secondaryColors": [
+            "#44413d",
+            "#413e40"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Choir+Trousers"
+    },
+    {
+        "name": "Constable'S Trousers",
+        "type": "legs",
+        "image": "Legs/Constable's Trousers.png",
+        "primaryColor": "#908f8e",
+        "secondaryColors": [
+            "#52545b",
+            "#3e4148"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Constable%27S+Trousers"
+    },
+    {
+        "name": "Crowfeather Trousers",
+        "type": "legs",
+        "image": "Legs/Crowfeather Trousers.png",
+        "primaryColor": "#8a8777",
+        "secondaryColors": [
+            "#62635a",
+            "#48443b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Crowfeather+Trousers"
+    },
+    {
+        "name": "Decorative Old Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Decorative Old Hunter Trousers.png",
+        "primaryColor": "#a09b8d",
+        "secondaryColors": [
+            "#90896f",
+            "#837b64"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Decorative+Old+Hunter+Trousers"
+    },
+    {
+        "name": "Doll Skirt",
+        "type": "legs",
+        "image": "Legs/Doll Skirt.png",
+        "primaryColor": "#a89e95",
+        "secondaryColors": [
+            "#685c51",
+            "#594636"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Doll+Skirt"
+    },
+    {
+        "name": "Executioner Trousers",
+        "type": "legs",
+        "image": "Legs/Executioner Trousers.png",
+        "primaryColor": "#a19d97",
+        "secondaryColors": [
+            "#8c847a",
+            "#847a70"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Executioner+Trousers"
+    },
+    {
+        "name": "Foreign Trousers",
+        "type": "legs",
+        "image": "Legs/Foreign Trousers.png",
+        "primaryColor": "#84735f",
+        "secondaryColors": [
+            "#534e48",
+            "#48423b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Foreign+Trousers"
+    },
+    {
+        "name": "Gascoigne'S Trousers",
+        "type": "legs",
+        "image": "Legs/Gascoigne's Trousers.png",
+        "primaryColor": "#5f5653",
+        "secondaryColors": [
+            "#4a423d",
+            "#443b38"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gascoigne%27S+Trousers"
+    },
+    {
+        "name": "Gehrman'S Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Gehrman's Hunter Trousers.png",
+        "primaryColor": "#5c4948",
+        "secondaryColors": [
+            "#4e433c",
+            "#503e40"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gehrman%27S+Hunter+Trousers"
+    },
+    {
+        "name": "Graveguard Kilt",
+        "type": "legs",
+        "image": "Legs/Graveguard Kilt.png",
+        "primaryColor": "#9d674b",
+        "secondaryColors": [
+            "#945337",
+            "#6c554a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Graveguard+Kilt"
+    },
+    {
+        "name": "Harrowed Trousers",
+        "type": "legs",
+        "image": "Legs/Harrowed Trousers.png",
+        "primaryColor": "#a19c94",
+        "secondaryColors": [
+            "#85776a",
+            "#675c51"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Harrowed+Trousers"
+    },
+    {
+        "name": "Henryk'S Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Henryk's Hunter Trousers.png",
+        "primaryColor": "#9b896f",
+        "secondaryColors": [
+            "#88765e",
+            "#695b4b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Henryk%27S+Hunter+Trousers"
+    },
+    {
+        "name": "Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Hunter Trousers.png",
+        "primaryColor": "#575451",
+        "secondaryColors": [
+            "#48423c",
+            "#3e403d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter+Trousers"
+    },
+    {
+        "name": "Knight Dress",
+        "type": "legs",
+        "image": "Legs/Knight Dress.png",
+        "primaryColor": "#aba18b",
+        "secondaryColors": [
+            "#a55552",
+            "#574f48"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Knight+Dress"
+    },
+    {
+        "name": "Knight'S Trousers",
+        "type": "legs",
+        "image": "Legs/Knight's Trousers.png",
+        "primaryColor": "#876d59",
+        "secondaryColors": [
+            "#66554a",
+            "#55453a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Knight%27S+Trousers"
+    },
+    {
+        "name": "Madman Leggings",
+        "type": "legs",
+        "image": "Legs/Madman Leggings.png",
+        "primaryColor": "#aaa08c",
+        "secondaryColors": [
+            "#968973",
+            "#867762"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Madman+Leggings"
+    },
+    {
+        "name": "Maria Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Maria Hunter Trousers.png",
+        "primaryColor": "#86705c",
+        "secondaryColors": [
+            "#67574a",
+            "#574739"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Maria+Hunter+Trousers"
+    },
+    {
+        "name": "Old Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Old Hunter Trousers.png",
+        "primaryColor": "#8e8671",
+        "secondaryColors": [
+            "#645e4f",
+            "#524b37"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Old+Hunter+Trousers"
+    },
+    {
+        "name": "Student Trousers",
+        "type": "legs",
+        "image": "Legs/Student Trousers.png",
+        "primaryColor": "#494745",
+        "secondaryColors": [
+            "#46423c",
+            "#3e403e"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Student+Trousers"
+    },
+    {
+        "name": "Tomb Prospector Trousers",
+        "type": "legs",
+        "image": "Legs/Tomb Prospector Trousers.png",
+        "primaryColor": "#594f4a",
+        "secondaryColors": [
+            "#4c423c",
+            "#47403a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Tomb+Prospector+Trousers"
+    },
+    {
+        "name": "White Church Dress",
+        "type": "legs",
+        "image": "Legs/White Church Dress.png",
+        "primaryColor": "#c8c8c4",
+        "secondaryColors": [
+            "#c4c2bb",
+            "#c1bdb6"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/White+Church+Dress"
+    },
+    {
+        "name": "White Church Trousers",
+        "type": "legs",
+        "image": "Legs/White Church Trousers.png",
+        "primaryColor": "#989a97",
+        "secondaryColors": [
+            "#62625f",
+            "#4a423b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/White+Church+Trousers"
+    },
+    {
+        "name": "Wine Hakama",
+        "type": "legs",
+        "image": "Legs/Wine Hakama.png",
+        "primaryColor": "#85796c",
+        "secondaryColors": [
+            "#665f57",
+            "#4b433b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Wine+Hakama"
+    },
+    {
+        "name": "Yahar'Hul Black Trousers",
+        "type": "legs",
+        "image": "Legs/Yahar'hul Black Trousers.png",
+        "primaryColor": "#948775",
+        "secondaryColors": [
+            "#867769",
+            "#6d6156"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yahar%27Hul+Black+Trousers"
+    },
+    {
+        "name": "Yharnam Hunter Trousers",
+        "type": "legs",
+        "image": "Legs/Yharnam Hunter Trousers.png",
+        "primaryColor": "#87755d",
+        "secondaryColors": [
+            "#5b554c",
+            "#4c453b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Yharnam+Hunter+Trousers"
+    },
+    {
+        "name": "Cannon",
+        "type": "shields",
+        "image": "Shields/Cannon.png",
+        "primaryColor": "#9e9c97",
+        "secondaryColors": [
+            "#5b5856",
+            "#48423c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Cannon"
+    },
+    {
+        "name": "Church Cannon",
+        "type": "shields",
+        "image": "Shields/Church Cannon.png",
+        "primaryColor": "#9b9891",
+        "secondaryColors": [
+            "#898578",
+            "#646156"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Church+Cannon"
+    },
+    {
+        "name": "Evelyn",
+        "type": "shields",
+        "image": "Shields/Evelyn.png",
+        "primaryColor": "#a09690",
+        "secondaryColors": [
+            "#635852",
+            "#51433b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Evelyn"
+    },
+    {
+        "name": "Fist Of Gratia",
+        "type": "shields",
+        "image": "Shields/Fist of Gratia.png",
+        "primaryColor": "#9c9896",
+        "secondaryColors": [
+            "#847972",
+            "#595755"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Fist+Of+Gratia"
+    },
+    {
+        "name": "Flamesprayer",
+        "type": "shields",
+        "image": "Shields/Flamesprayer.png",
+        "primaryColor": "#a59c91",
+        "secondaryColors": [
+            "#655b51",
+            "#4e443a"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Flamesprayer"
+    },
+    {
+        "name": "Gatling Gun",
+        "type": "shields",
+        "image": "Shields/Gatling Gun.png",
+        "primaryColor": "#999290",
+        "secondaryColors": [
+            "#8d7167",
+            "#5f5a57"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Gatling+Gun"
+    },
+    {
+        "name": "Hunter Blunderbuss",
+        "type": "shields",
+        "image": "Shields/Hunter Blunderbuss.png",
+        "primaryColor": "#93979a",
+        "secondaryColors": [
+            "#565758",
+            "#5a4539"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter+Blunderbuss"
+    },
+    {
+        "name": "Hunter Pistol",
+        "type": "shields",
+        "image": "Shields/Hunter Pistol.png",
+        "primaryColor": "#9a9997",
+        "secondaryColors": [
+            "#5e5a55",
+            "#574538"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter+Pistol"
+    },
+    {
+        "name": "Hunter'S Torch",
+        "type": "shields",
+        "image": "Shields/Hunter's Torch.png",
+        "primaryColor": "#949392",
+        "secondaryColors": [
+            "#a18772",
+            "#8c7465"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter%27S+Torch"
+    },
+    {
+        "name": "Loch Shield",
+        "type": "shields",
+        "image": "Shields/Loch Shield.png",
+        "primaryColor": "#dcdfe3",
+        "secondaryColors": [
+            "#9a9b9e",
+            "#657289"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Loch+Shield"
+    },
+    {
+        "name": "Ludwig'S Rifle",
+        "type": "shields",
+        "image": "Shields/Ludwig's Rifle.png",
+        "primaryColor": "#9f9a90",
+        "secondaryColors": [
+            "#908776",
+            "#857866"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Ludwig%27S+Rifle"
+    },
+    {
+        "name": "Piercing Rifle",
+        "type": "shields",
+        "image": "Shields/Piercing Rifle.png",
+        "primaryColor": "#969492",
+        "secondaryColors": [
+            "#635c57",
+            "#615b58"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Piercing+Rifle"
+    },
+    {
+        "name": "Repeating Pistol",
+        "type": "shields",
+        "image": "Shields/Repeating Pistol.png",
+        "primaryColor": "#a6a399",
+        "secondaryColors": [
+            "#9a8a70",
+            "#605b51"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Repeating+Pistol"
+    },
+    {
+        "name": "Rosmarinus",
+        "type": "shields",
+        "image": "Shields/Rosmarinus.png",
+        "primaryColor": "#cfcfd1",
+        "secondaryColors": [
+            "#99999b",
+            "#59595b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Rosmarinus"
+    },
+    {
+        "name": "Torch",
+        "type": "shields",
+        "image": "Shields/Torch.png",
+        "primaryColor": "#949392",
+        "secondaryColors": [
+            "#a18772",
+            "#8c7465"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Torch"
+    },
+    {
+        "name": "Wooden Shield",
+        "type": "shields",
+        "image": "Shields/Wooden Shield.png",
+        "primaryColor": "#857165",
+        "secondaryColors": [
+            "#63544b",
+            "#52443b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Wooden+Shield"
+    },
+    {
+        "name": "Amygdalan Arm",
+        "type": "weapons",
+        "image": "Weapons/Amygdalan Arm.png",
+        "primaryColor": "#a4988d",
+        "secondaryColors": [
+            "#86796d",
+            "#645c55"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Amygdalan+Arm"
+    },
+    {
+        "name": "Beast Claw",
+        "type": "weapons",
+        "image": "Weapons/Beast Claw.png",
+        "primaryColor": "#958672",
+        "secondaryColors": [
+            "#877661",
+            "#6b604f"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Beast+Claw"
+    },
+    {
+        "name": "Beast Cutter",
+        "type": "weapons",
+        "image": "Weapons/Beast Cutter.png",
+        "primaryColor": "#a09992",
+        "secondaryColors": [
+            "#908578",
+            "#85796d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Beast+Cutter"
+    },
+    {
+        "name": "Beasthunter Saif",
+        "type": "weapons",
+        "image": "Weapons/Beasthunter Saif.png",
+        "primaryColor": "#d6d4d4",
+        "secondaryColors": [
+            "#a29c96",
+            "#87766b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Beasthunter+Saif"
+    },
+    {
+        "name": "Blade Of Mercy",
+        "type": "weapons",
+        "image": "Weapons/Blade of Mercy.png",
+        "primaryColor": "#999a98",
+        "secondaryColors": [
+            "#5b5955",
+            "#46423b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Blade+Of+Mercy"
+    },
+    {
+        "name": "Bloodletter",
+        "type": "weapons",
+        "image": "Weapons/Bloodletter.png",
+        "primaryColor": "#8e6e5d",
+        "secondaryColors": [
+            "#6c5b4e",
+            "#5f4836"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Bloodletter"
+    },
+    {
+        "name": "Boom Hammer",
+        "type": "weapons",
+        "image": "Weapons/Boom Hammer.png",
+        "primaryColor": "#d9d8d8",
+        "secondaryColors": [
+            "#9c9a99",
+            "#5e5c5b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Boom+Hammer"
+    },
+    {
+        "name": "Burial Blade",
+        "type": "weapons",
+        "image": "Weapons/Burial Blade.png",
+        "primaryColor": "#a69f94",
+        "secondaryColors": [
+            "#665b50",
+            "#514539"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Burial+Blade"
+    },
+    {
+        "name": "Chikage",
+        "type": "weapons",
+        "image": "Weapons/Chikage.png",
+        "primaryColor": "#a06250",
+        "secondaryColors": [
+            "#675b4d",
+            "#534538"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Chikage"
+    },
+    {
+        "name": "Church Pick",
+        "type": "weapons",
+        "image": "Weapons/Church Pick.png",
+        "primaryColor": "#959493",
+        "secondaryColors": [
+            "#605d5e",
+            "#5d5b5d"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Church+Pick"
+    },
+    {
+        "name": "Holy Moonlight Sword",
+        "type": "weapons",
+        "image": "Weapons/Holy Moonlight Sword.png",
+        "primaryColor": "#dad9d8",
+        "secondaryColors": [
+            "#9c9b99",
+            "#5f5e5b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Holy+Moonlight+Sword"
+    },
+    {
+        "name": "Hunter Axe",
+        "type": "weapons",
+        "image": "Weapons/Hunter Axe.png",
+        "primaryColor": "#97918d",
+        "secondaryColors": [
+            "#605954",
+            "#4a433c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Hunter+Axe"
+    },
+    {
+        "name": "Kirkhammer",
+        "type": "weapons",
+        "image": "Weapons/Kirkhammer.png",
+        "primaryColor": "#d5d5d5",
+        "secondaryColors": [
+            "#969697",
+            "#5f5e5f"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Kirkhammer"
+    },
+    {
+        "name": "Kos Parasite",
+        "type": "weapons",
+        "image": "Weapons/Kos Parasite.png",
+        "primaryColor": "#919796",
+        "secondaryColors": [
+            "#7c8383",
+            "#5e625e"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Kos+Parasite"
+    },
+    {
+        "name": "Logarius' Wheel",
+        "type": "weapons",
+        "image": "Weapons/Logarius' Wheel.png",
+        "primaryColor": "#a29f96",
+        "secondaryColors": [
+            "#87735d",
+            "#6c6152"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Logarius%27+Wheel"
+    },
+    {
+        "name": "Ludwig'S Holy Blade",
+        "type": "weapons",
+        "image": "Weapons/Ludwig's Holy Blade.png",
+        "primaryColor": "#999998",
+        "secondaryColors": [
+            "#5e5b59",
+            "#4e413c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Ludwig%27S+Holy+Blade"
+    },
+    {
+        "name": "Rakuyo",
+        "type": "weapons",
+        "image": "Weapons/Rakuyo.png",
+        "primaryColor": "#9f9d99",
+        "secondaryColors": [
+            "#625e57",
+            "#605c57"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Rakuyo"
+    },
+    {
+        "name": "Reiterpallasch",
+        "type": "weapons",
+        "image": "Weapons/Reiterpallasch.png",
+        "primaryColor": "#e1dfdd",
+        "secondaryColors": [
+            "#9d9793",
+            "#625c58"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Reiterpallasch"
+    },
+    {
+        "name": "Rifle Spear",
+        "type": "weapons",
+        "image": "Weapons/Rifle Spear.png",
+        "primaryColor": "#9d9791",
+        "secondaryColors": [
+            "#9b8872",
+            "#8b7661"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Rifle+Spear"
+    },
+    {
+        "name": "Saw Cleaver",
+        "type": "weapons",
+        "image": "Weapons/Saw Cleaver.png",
+        "primaryColor": "#aca08d",
+        "secondaryColors": [
+            "#9e8d73",
+            "#8a745f"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Saw+Cleaver"
+    },
+    {
+        "name": "Saw Spear",
+        "type": "weapons",
+        "image": "Weapons/Saw Spear.png",
+        "primaryColor": "#9d9993",
+        "secondaryColors": [
+            "#8a847a",
+            "#847970"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Saw+Spear"
+    },
+    {
+        "name": "Simon'S Bowblade",
+        "type": "weapons",
+        "image": "Weapons/Simon's Bowblade.png",
+        "primaryColor": "#9d9a94",
+        "secondaryColors": [
+            "#5f5b56",
+            "#49433b"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Simon%27S+Bowblade"
+    },
+    {
+        "name": "Stake Driver",
+        "type": "weapons",
+        "image": "Weapons/Stake Driver.png",
+        "primaryColor": "#989998",
+        "secondaryColors": [
+            "#5b5754",
+            "#4c433c"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Stake+Driver"
+    },
+    {
+        "name": "Threaded Cane",
+        "type": "weapons",
+        "image": "Weapons/Threaded Cane.png",
+        "primaryColor": "#a29990",
+        "secondaryColors": [
+            "#8a7469",
+            "#655951"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Threaded+Cane"
+    },
+    {
+        "name": "Tonitrus",
+        "type": "weapons",
+        "image": "Weapons/Tonitrus.png",
+        "primaryColor": "#a39c98",
+        "secondaryColors": [
+            "#8b7163",
+            "#5f5856"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Tonitrus"
+    },
+    {
+        "name": "Whirligig Saw",
+        "type": "weapons",
+        "image": "Weapons/Whirligig Saw.png",
+        "primaryColor": "#969691",
+        "secondaryColors": [
+            "#8b8873",
+            "#5e5d55"
+        ],
+        "link": "https://bloodborne.fandom.com/wiki/Whirligig+Saw"
+    }
+]

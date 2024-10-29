@@ -37,11 +37,9 @@ You may alter, adapt, or build upon the source material, as long as attribution 
 <img src="https://i.imgur.com/fAYVJlW.png" width="680" height="100"/>
 </p>
 
->[ver 1.0.1] - *added functionality for searching items by name and color, currently only Elden Ring is supported.* 
+> [ver 1.1.0] - *Major update. Outfit simulator added. Search behaviour improved, color divs made individually selectable. UI overhauled, "back to top" button added, and styling revised. 
 
-> [ver 1.0.2] - *Elden Ring, Demon's Souls, and Dark Souls 1-3 supported. Working on renaming images to enable Bloodborne support.*
-
-> [ver 1.0.3] - *search by type function added for all games. mobile device support improved. Improved color database for the following items:* 
+> [ver 1.0.3] - *Search by type function added for all games. Mobile device support improved. Improved color database for the following items:* 
 <details>
   <summary>Item List</summary>
   
@@ -192,6 +190,12 @@ You may alter, adapt, or build upon the source material, as long as attribution 
 - Zweihander
 
 </details>
+
+> [ver 1.0.2] - *Elden Ring, Demon's Souls, and Dark Souls 1-3 supported. Working on renaming images to enable Bloodborne support.*
+
+> [ver 1.0.1] - *Added functionality for searching items by name and color, currently only Elden Ring is supported. Revised search functionality to be game-specific, enabling more specific item types for titles like Bloodborne.*
+
+> [ver 1.0.0] - *First public release! Color database created, pages for each game created, and index file added with links for each game.
 
 Upcoming changes:
 - [x] Add mobile device support
