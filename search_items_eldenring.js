@@ -11,17 +11,16 @@ function shuffle(array) {
   return array;
 }
 
-// Fetch the typed_items_for_web.json file and store its data
-
+// Fetch data from JSON and selectively retrieve properties
 async function fetchItems() {
   try {
-      // Use the base URL directly to fetch all items without undefined filters
+      // Use the base URL to fetch all items
       const response = await fetch('https://elden-ring-api-three.vercel.app/eldenring_items.json');
       if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
       }
       
-      // Retrieve the specific properties from each item in the response data
+      // Retrieve only specific properties for each item
       let items = await response.json();
       items = items.map(item => ({
           name: item.name,
