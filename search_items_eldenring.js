@@ -15,6 +15,30 @@ function shuffle(array) {
 
 async function fetchItems() {
   try {
+      // Use the base URL directly to fetch all items without undefined filters
+      const response = await fetch('https://elden-ring-api-three.vercel.app/eldenring_items.json');
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      // Retrieve the specific properties from each item in the response data
+      let items = await response.json();
+      items = items.map(item => ({
+          name: item.name,
+          primaryColor: item.primaryColor,
+          secondaryColors: item.secondaryColors,
+          link: item.link
+      }));
+      
+      // Shuffle items before displaying
+      items = shuffle(items);
+      
+      displayItems(items);  // Display all items initially
+  } catch (error) {
+      console.error('Error loading items:', error);
+  }
+}
+  try {
       // Dynamically construct the API endpoint with query parameters based on active filters
       let apiUrl = 'https://elden-ring-api-three.vercel.app/eldenring_items.json?';
 
