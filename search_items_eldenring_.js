@@ -116,6 +116,12 @@ function createItemCard(item) {
   const card = document.createElement('div');
   card.classList.add('item-card');
 
+    // Right-click menu to send item to outfit simulator
+    card.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        showContextMenu(event, item);
+    });
+
   const img = document.createElement('img');
   img.src = `pages/eldenring/icons/${item.image}`;
   img.alt = item.name;
@@ -182,7 +188,50 @@ function createItemCard(item) {
   return card;
 }
 
+function showContextMenu(event, item) {
+    // Remove any existing context menu
+    const existingMenu = document.querySelector(".context-menu");
+    if (existingMenu) {
+        existingMenu.remove();
+    }
 
+    const menu = document.createElement("div");
+    menu.classList.add("context-menu");
+    menu.style.top = `${event.pageY}px`;
+    menu.style.left = `${event.pageX}px`;
+
+    const sendToSimulatorOption = document.createElement("div");
+    sendToSimulatorOption.textContent = "Send to Outfit Simulator";
+    sendToSimulatorOption.onclick = () => {
+        addItemToSimulator(item);
+        menu.remove();
+    };
+
+    menu.appendChild(sendToSimulatorOption);
+    document.body.appendChild(menu);
+
+    // Remove menu after clicking outside
+    document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target)) {
+            menu.remove();
+        }
+    }, { once: true });
+}
+
+// Add item to simulator slots and save to localStorage
+function addItemToSimulator(item) {
+    const slotId = `${item.type}Slot`;
+    const slot = document.getElementById(slotId);
+    if (slot) {
+        slot.textContent = item.name;
+        slot.style.backgroundImage = `url('pages/eldenring/icons/${item.image}')`;
+
+        // Save the outfit data in localStorage
+        const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
+        outfitSlots[slotId] = { name: item.name, image: item.image };
+        localStorage.setItem('outfitSlots', JSON.stringify(outfitSlots));
+    }
+}
 
 // Add event listener for color picker, name input, slider, and color distance threshold slider
 document.getElementById('favcolor').addEventListener('change', function() {
@@ -264,6 +313,23 @@ document.getElementById("clearFilter").addEventListener("click", () => {
 window.onload = fetchItems;
 
 
+// Styling for the context menu
+const style = document.createElement('style');
+style.textContent = `
+    .context-menu {
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        z-index: 1000;
+        padding: 5px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        cursor: pointer;
+        font-size: 14px;
+        color: black;
+    }
+`;
+document.head.appendChild(style);
+
 // Function to load outfit slots with placeholders and selected items
 function loadOutfitFromStorage() {
     const types = ["head", "chest", "hands", "legs", "weapons", "shields"];
@@ -302,18 +368,27 @@ function loadOutfitFromStorage() {
     });
 }
 
+function toggleOutfitSimulator() {
+    const slots = document.getElementById("outfitSlots");
+    if (slots.style.display === "none" || slots.style.display === "") {
+        slots.style.display = "grid"; // Set display to grid for horizontal alignment
+    } else {
+        slots.style.display = "none";
+    }
+}
+
 // Function to add item to simulator and replace placeholder with selected item
 function addItemToSimulator(item) {
     const slotId = `${item.type}Slot`;
 
-    const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {
-        headSlot: null, chestSlot: null, handsSlot: null, legsSlot: null, weaponsSlot: null, shieldsSlot: null
-    };
-
+    // Update localStorage with the unique item type
+    const outfitSlots = JSON.parse(localStorage.getItem('outfitSlots')) || {};
     outfitSlots[slotId] = { name: item.name, image: item.image };
     localStorage.setItem('outfitSlots', JSON.stringify(outfitSlots));
 
-    loadOutfitFromStorage(); // Refresh simulator view
+    // Update the collapsible view in eldenring.html if available
+    const outfitContainer = document.getElementById("outfitSlots");
+    loadOutfitFromStorage();
 }
 
 // Initialize outfit display on load
